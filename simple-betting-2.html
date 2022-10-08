@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro betting</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="container">
+    <main>
+        <section id="main">
+            <div class="main_wrapper">
+
+                <div class="betting__title">
+                    <h2>SIMPLE betting</h2>
+                    <a onclick="goBack()"><img src="assets/img/times.png" alt=""></a>
+                </div>
+
+                <div class="simple-betting betting_two">
+                    <div class="container">
+                        <div class="choose_d">
+                            <div class="choose_filed">
+                                <label for="">Days</label>
+                                <div class="select">
+                                    <select>
+                                        <option value="">1day</option>
+                                        <option value="">2day</option>
+                                        <option value="">3day</option>
+                                        <option value="">4day</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="choose_filed type_field">
+                                <label for="">Type</label>
+                                <div class="select">
+                                    <select onchange="simpleBettingHandler(this.value)">
+                                        <option value="simple-betting-1" selected="selected">4D : Big-Small-4A</option>
+                                        <option value="simple-betting-2">4D : 4A-4B-4C-4D-4E</option>
+                                        <option value="simple-betting-3">4D : 2D : 2A-2B-2C-2D-2E-2N</option>
+                                        <option value="simple-betting-4">3D : 3A-3B-3C-3D-3D-3N</option>
+                                        <option value="simple-betting-5">5D : 5D</option>
+                                        <option value="simple-betting-6">6D : 6D</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="simple_betting_company">
+                            <div class="betting_company">
+                                <h4>Company</h4>
+                                <div class="company_icon">
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-1.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-1.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-1.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-1.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-1.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-1.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-1.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-1.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+
+
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-1.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-1.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-2.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-2.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+                                    <!--                        <div class="bet_bx">-->
+                                    <!--                            <img src="assets/img/brand-3.png" class="bk_1" alt="">-->
+                                    <!--                            <img src="assets/img/logo_b-3.png" class="bk_2" alt="">-->
+                                    <!--                        </div>-->
+                                </div>
+                                <div class="edit_option">
+                                    <a href="simple-betting-1.html"><img src="assets/img/edit.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="my-table">
+                                <div class="simple-betting-1">
+                                    <div class="ibox_table pb-4 fast-betting-container">
+                                        <ul>
+                                            <li>Number</li>
+                                            <li>Big
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>Small
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>4A
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>Box/iBox</li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="simple-betting-2">
+                                    <div class="ibox_table pb-4 fast-betting-container">
+                                        <ul>
+                                            <li>Number</li>
+                                            <li>4A
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>4B
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>4C
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>4D
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>4E
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>Box/iBox</li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="simple-betting-3">
+                                    <div class="ibox_table pb-4 fast-betting-container">
+                                        <ul>
+                                            <li>Number</li>
+                                            <li>2A
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>2B
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>2C
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>2D
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>2E
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>2N
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="simple-betting-4">
+
+                                    <div class="ibox_table pb-4 fast-betting-container">
+                                        <ul>
+                                            <li>Number</li>
+                                            <li>3A
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>3B
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>3C
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>3D
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>3E
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>3N
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="simple-betting-5">
+                                    <div class="ibox_table pb-4 fast-betting-container">
+                                        <ul>
+                                            <li>Number</li>
+                                            <li>5D
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="simple-betting-6">
+                                    <div class="ibox_table pb-4 fast-betting-container">
+                                        <ul>
+                                            <li>Number</li>
+                                            <li>6D
+                                                <div class="table_check">
+                                                    <div class="codeplay-ck">
+                                                        <label class="container-ck">
+                                                            <input type="checkbox"">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="cost_wrapper">
+            <div class="total_cost">
+                <h4>Total Cost :</h4>
+                <h2>9.00</h2>
+            </div>
+            <img class="heart mr-1" src="assets/img/heart%20(2).png">
+
+            <div class="confirm_btn">
+                <a href="order.html" class="common_btn btn_black">Comfirm Bet</a>
+            </div>
+        </div>
+        <div class="keypad_box">
+            <div class="keypad_top">
+                <h4>T : 00.00</h4>
+            </div>
+            <div class="keypad_button">
+                <ul>
+                    <li class="numpad-btn">
+                        <span class="number">1</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">2</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">3</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="dismiss">
+                        <img class="btn_arrow" src="assets/img/arrow-white.png" alt="">
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">4</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">5</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">6</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="backspace">
+                        <img class="btn_icon" src="assets/img/backspace.png" alt="">
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">7</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">8</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">9</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="btn_txt">Next</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number"><i class="fullstop">.</i></span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">0</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="number">#</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                    <li class="numpad-btn">
+                        <span class="hash_txt btn_txt">Bet</span>
+                        <img class="button_bg" src="assets/img/button_bg.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1493 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+@font-face {
+  font-family: 'Avenir-roman';
+  src: url(../fonts/AvenirLTStd-Roman.otf);
+}
+@font-face {
+  font-family: 'Avenir-book';
+  src: url(../fonts/AvenirLTStd-Book.otf);
+}
+@font-face {
+  font-family: 'Avenir-black';
+  src: url(../fonts/AvenirLTStd-Black.otf);
+}
+
+
+
+
+body{
+  color: #fff;
+  line-height: 1;
+  font-family: 'Avenir-roman';
+  background-color: #000;
+  /*overflow: hidden;*/
+}
+
+a:focus {
+  outline: 0 solid
+}
+
+.center-abs{
+  position: absolute;
+  right: 50%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px;
+  font-family: 'Avenir-roman';
+  font-weight: normal;
+}
+
+a:hover {
+  text-decoration: none
+}
+
+a, button, input, textarea{
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+}
+h1{
+  font-size: 36px;
+}
+h2{
+  font-size: 32px;
+}
+h3{
+  font-size: 28px;
+}
+h4{
+  font-size: 24px;
+}
+h5{
+  font-size: 20px;
+}
+
+.heart{
+  height: 36px;
+  width: 36px;
+}
+
+.pins{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container{
+  max-width: 400px;
+  margin: 0 auto;
+
+}
+
+.pb-4{
+  /*padding-bottom: 10rem;*/
+}
+
+.pb-keyboard{
+  /*padding-bottom: 25rem;*/
+}
+
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+.footer{
+
+}
+
+html, body {
+  margin: 0;
+  height: 100%; /* can also use viewport units (height: 100vh) */
+}
+
+
+.parent {
+  position: relative;
+  bottom: 0;
+  /*display: grid;*/
+  /*grid-template-columns: 250px 1fr;*/
+  /*grid-template-rows: 150px 1fr;*/
+}
+
+.child {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*position: absolute;*/
+  /*grid-area: 1 / 1 / 2 / 2;*/
+}
+
+.child-2 {
+  /*margin-left: 200px;*/
+}
+
+#container {
+  display: flex; /* displays flex-items (children) inline */
+  flex-direction: column; /* stacks them vertically */
+  height: 100%; /* needs to take the parents height, alternative: body {display: flex} */
+}
+
+main {
+  flex: 1; /* takes the remaining height of the "container" div */
+  overflow: auto; /* to scroll just the "main" div */
+}
+
+section {
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  height: 100%; /* takes the visible area of the "main" div */
+  overflow: auto; /* recommended */
+  /*border-bottom: 1px solid;*/
+  /*background: lightgreen;*/
+}
+
+header {background: #f88}
+section:last-child {border: none}
+footer {/*background: lightblue*/}
+
+.main_wrapper{
+  /*flex: 1;*/
+  /*overflow: scroll;*/
+  max-width: 767px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /*margin-bottom: 1000px;*/
+  /*position: relative;*/
+  /*height: 100vh;*/
+  padding-top: 30px;
+  background-color: #000;
+}
+
+
+.flex-container {
+  display: flex;
+  /*width: 200px;*/
+  /*height: 200px;*/
+  border: 1px solid black;
+  justify-content: center;
+}
+
+.flex-item {
+  box-sizing: border-box;
+  /*width: 150px;*/
+  border: 5px solid blue;
+  align-self: center;
+  background-color: red;
+  display: flex;
+  flex-flow: column;
+  max-height: 100%;
+}
+
+html, body{
+  overflow: hidden;
+}
+
+.content {
+  background-color: grey;
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+.bg_image{
+  background-color: #000;
+  background-image: url(../img/main-bg2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.betting__title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.betting__title h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.betting__title img {
+  width: 24px;
+  margin-left: 15px;
+  position: relative;
+  top: -3px;
+  cursor: pointer;
+}
+.info_icn {
+  margin: 0 !important;
+  width: 28px !important;
+  position: absolute !important;
+  left: 15px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  cursor: pointer;
+}
+.bet_item {
+  position: relative;
+  z-index: auto;
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.bet_item_bg {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.betting__title a {
+  line-height: 0;
+}
+.bet_icon {
+  width: 16%;
+}
+.list_text {
+  width: 84%;
+  padding-right: 15px;
+}
+.list_text h2 {
+  font-size: 32px;
+  color: #000000;
+  line-height: 1;
+  font-family: 'Avenir-black';
+}
+.list_text p {
+  font-size: 16px;
+  margin: 0;
+  color: #000000;
+}
+.bet_icon {
+  text-align: right;
+}
+.bet_black h2{
+  color: #fff;
+}
+.bet_black p {
+  color: #fff;
+}
+.bet_3 .list_text {
+  width: 80%;
+}
+.bet_3 .bet_icon {
+  width: 20%;
+}
+.choose_filed {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.choose_filed label {
+  width: 80px;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+}
+.simple-betting{
+  padding: 0 10px;
+}
+
+
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #000;
+  background-color: #fff;
+  background-image: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Avenir-roman';
+
+  text-align: center;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 120px;
+  height: 35px;
+  border-radius: 0;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  background-color: #fff;
+  transition: .25s all ease;
+  pointer-events: none;
+  height: 100%;
+  width: 25px;
+  color: #000;
+  line-height: 35px;
+  text-align: center;
+}
+/* Transition */
+.select:hover::after {
+  color: #000;
+}
+.type_field .select {
+  width: 80%;
+}
+.choose_d {
+  margin: 35px 0;
+  margin-top: 50px;
+}
+
+.brand_logo_wrap {
+  text-align: center;
+}
+
+.brand_logo_wrap h4 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.companny_logo {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+
+}
+.brand_logo {
+  padding: 12px;
+  margin-bottom: 5px;
+}
+.brand_logo img {
+  margin-bottom: 12px;
+  width: 80px;
+}
+.brand_logo p {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+
+}
+.next_option {
+  text-align: center;
+  margin-top: 35px;
+}
+.common_btn {
+  background: #e2ac0c;
+  font-size: 16px;
+  color: #000;
+  width: 180px;
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Avenir-black';
+  cursor:pointer;
+}
+.next_option a {
+  text-transform: uppercase;
+}
+.order_info {
+  padding: 0 15px;
+}
+.order_info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  padding: 25px;
+  color: #000;
+  margin-top: 40px;
+  height: 325px;
+}
+.order_info ul li {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.betting_company {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #fff;
+}
+.betting_company h4 {
+  font-size: 20px;
+  margin: 0;
+}
+.company_icon {
+  display: flex;
+  row-gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 15px;
+}
+.company_icon img {
+  width: 42px;
+  margin-right: 10px;
+}
+.edit_option {
+  padding-left: 5px;
+}
+.edit_option img {
+  width: 55px;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#footer {
+  background-color: #efefef;
+  flex: 0 0 50px;/*or just height:50px;*/
+  margin-top: auto;
+}
+.cost_wrapper {
+  display: flex;
+  width: 100%;
+  padding: 20px 15px;
+  margin: auto;
+  /*position: fixed;*/
+  /*position: sticky;*/
+  /*bottom: 0;*/
+  z-index: 9;
+  background: #e2ac0c;
+  align-content: flex-end;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 768px;
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+}
+
+.mr-1,
+.mx-1 {
+  margin-right: 0.25rem !important;
+}
+
+.total_cost h4 {
+  color: #0e0606;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.total_cost h2 {
+  font-size: 40px;
+  margin: 0;
+  font-family: 'Avenir-black';
+  color: #0e0606;
+}
+.btn_black {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  width: auto;
+  padding: 0 10px;
+  width: 100%;
+}
+.total_cost {
+  padding-top: 10px;
+  width: 65%;
+}
+
+.ibox_table li img {
+  width: 18px;
+  margin-left: 5px;
+}
+.ibox_table li img {
+  width: 16px;
+}
+.ibox_table ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.ibox_table ul li {
+  width: 20%;
+  font-family: 'Avenir-black';
+  display: flex;
+  color: #fff;
+  align-items: center;
+  font-size: 14px;
+  justify-content: center;
+  text-align: center;
+  padding:4px 2px;
+}
+.ibox_table li input {
+  width: 100%;
+  height: 30px;
+  padding: 3px 8px;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  font-family: 'Avenir-black';
+}
+.betting_two {
+  padding: 0 0px;
+}
+.table_ck .select {
+  width: 100%;
+  height: 30px;
+  font-size: 15px !important;
+  text-align: left !important;
+}
+.table_ck select {
+  font-size: 16px !important;
+  padding: 5px 10px;
+  width: 100% !important;
+  text-align: left !important;
+}
+.table_ck {
+  width: 100%;
+}
+.let_logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.let_logo img {
+    width: 40px;
+}
+.bet_bx img {
+    width: 40px;
+}
+
+.pro_betting_info {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+}
+.bg_3 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  bottom: 0;
+}
+.betting__type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bet__type {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  width: 55%;
+}
+.bet__day {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  padding-left: 5px;
+}
+.bet__type h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  width: 50px;
+}
+.bet__day h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  width: 50px;
+}
+.select_type {
+  width: 73%;
+}
+.select_type .select {
+  width: 100%;
+  height: 32px;
+}
+.select_type select {
+  padding: 0 10px;
+  font-size: 14px;
+  font-family: 'Avenir-roman';
+  text-align: left;
+  text-transform: uppercase;
+}
+.choose_bet {
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
+.choose_bet h4 {
+  font-size: 20px;
+  color: #000;
+  font-family: 'Avenir-Black';
+}
+.betting__number {
+  text-align: center;
+}
+
+
+.pin {
+
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bet_number_wrap {
+  background: #000;
+  padding: 20px 20px;
+  margin-top: 20px;
+  padding-bottom: 200px;
+}
+.betting__number h4 {
+  font-size: 18px;
+  letter-spacing: .3px;
+  margin-bottom: 20px;
+}
+.bet_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+}
+
+.number_input {
+  margin: 0;
+  padding: 0 5px;
+}
+.number_input input {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  padding: 12px;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Avenir-Black';
+}
+.bet_ibox {
+  margin-top: 25px;
+}
+.bet_ibox h4 {
+  font-size: 18px;
+}
+
+.bet_ibox select {
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: 'Avenir-black';
+  text-align: left;
+}
+.bet_ibox .select {
+  width: 100px;
+}
+.confirm_btn {
+  width: 50%;
+}
+.btn_white {
+  text-align: center;
+  background: #fff;
+  color: #000;
+  width: 100%;
+  margin-top: 10px;
+  height: 45px;
+  line-height: 45px;
+}
+.singe_bet {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.bet_ibox {
+  margin-top: 25px;
+  max-width: 90%;
+}
+.ibet_number {
+  width: 33.33%;
+  padding-right: 10px;
+  text-align: center;
+}
+.ibet_number label {
+  margin-bottom: 8px;
+  display: block;
+}
+.ibet_number input {
+  width: 100%;
+  height: 28px;
+  padding: 2px 10px;
+  font-size: 16px;
+  text-align: center;
+}
+.item_4 .ibet_number{
+  width: 25%;
+}
+.bet_ibox.item_4{
+  margin-top: 25px;
+  max-width: 100%;
+}
+
+.betting_item_6 .number_input input {
+  width: 45px;
+  height: 45px;
+  padding: 12px;
+  font-size: 28px;
+}
+
+.betting_item_5 .number_input input {
+  width: 55px;
+  height: 55px;
+  font-size: 30px;
+}
+
+.pay__title {
+  text-align: center;
+}
+
+.sets_card {
+  padding: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  position: relative;
+  margin-top: 15px;
+}
+.sets_wrapper {
+  position: relative;
+  padding: 0 25px;
+}
+.sets_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.sets_bet {
+  width: 60%;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.sets_bet h3 {
+  background: #e2ac0c;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: 'Avenir-Black';
+  margin: 0;
+}
+.sets_price h2 {
+  font-size: 25px;
+  margin: 0;
+  font-family: 'Avenir-Black';
+}
+.sets_price {
+  /*width: 40%;*/
+  /*text-align: right;*/
+}
+.sets_price p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.sets_logo {
+  display: flex;
+  align-items: center;
+}
+.sets_logo img {
+  width: 45px;
+  margin-right: 5px;
+}
+.sets_info button {
+  font-size: 14px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  width: 100px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  margin-right: 7px;
+}
+.sets_info {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.sets_info.d_info button {
+  width: 100%;
+  text-align: left;
+  padding: 5px 15px;
+  font-size: 14px;
+  line-height: normal;
+  margin-top: 3px;
+}
+span.set_number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  margin: 0;
+  display: inline-block;
+}
+span.set_x {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border-radius: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.sets_number_add {
+  margin-top: 15px;
+}
+.sets_number_add input {
+  width: 100%;
+  height: 45px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 12px;
+  color: #000;
+}
+.sets_number_add input::placeholder{
+  opacity: 1;
+  color: #000;
+}
+.sets_wrapper.sets_add .set_number {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pay__title h4 {
+  font-size: 24px;
+  margin-bottom: 7px;
+  font-family: 'Avenir-Black';
+}
+.fvrt_btn {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  background: #000;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 60px;
+}
+.fvrt_btn img {
+  width: 25px;
+}
+.btn_fvrt {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.fast_bet {margin-bottom: 20px;}
+.fast_bet label {
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Avenir-Black';
+}
+.fast_bet input {
+    width: 100%;
+    height: 35px;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-family: 'Avenir-Black';
+    color: #000;
+}
+
+
+.icon-warning{
+  height: 50px;
+  text-align: center;
+  margin-left: auto;
+}
+.bg-red{
+  background: #ff0101;
+}
+
+.warning-dialog{
+  /*margin: 15% auto;*/
+  /*position: fixed;*/
+  /*max-width: 300px;*/
+  /*text-align: center;*/
+  /*border-radius: 15px;*/
+  background: white;
+  color: black;
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  /*bottom: 150px;*/
+}
+
+.warning-dialog.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mt-1{
+  margin-top: 1rem; !important;
+}
+.dialog-title{
+  font-weight: bolder;
+}
+
+.p-2{
+  padding: 16px 32px 16px 32px;
+}
+
+.dialog-btn {
+  /*margin-top: 10px;*/
+  /*font-size: 16px;*/
+  color: white;
+  width: 100px;
+  display: inline-block;
+  height: 30px;
+  text-decoration: none;
+  cursor:pointer;
+  border-radius: 16px;
+}
+
+
+.header{
+  text-align: center;
+  padding: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* The Modal (background) */
+.modal {
+  vertical-align: middle;
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+/* Modal Content/Box */
+.modal-content {
+  color: black;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*margin: 15% auto; !* 15% from the top and centered *!*/
+  /*padding: 20px;*/
+  /*width: 50%; !* Could be more or less, depending on screen size *!*/
+  width: 300px;
+  border-radius: 15px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.betting_simple {
+
+  position: absolute;
+  bottom: 150px;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+.betting_simple.active {
+  opacity: 1;
+  visibility: visible;
+}
+.example_betting{
+  background: #e2ac0c;
+  border-radius: 15px;
+  padding: 15px;
+}
+.example_betting h5 {
+  color: #000;
+  margin-bottom: 15px;
+  font-family: 'Avenir-Black';
+  font-size: 16px;
+}
+.bet_inf_itm {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.bet_inf_itm span {
+  font-size: 14px;
+  color: #000;
+  margin-right: 5px;
+  font-family: 'Avenir-Black';
+}
+
+.bet_inf_itm button {
+  width: 140px;
+  height: 25px;
+  padding: 2px 10px;
+  text-align: left;
+  font-size: 12px;
+  font-family: 'Avenir-Black';
+  background: #fff;
+}
+.bet_inf_itm p {
+  padding-left: 8px;
+  color: #000;
+  font-size: 12px;
+  margin: 0;
+}
+.example_betting p {
+  color: #000;
+  font-size: 13px;
+  line-height: 16px;
+}
+.more_info {
+  margin-top: 10px;
+}
+.more_info a {
+  display: inline-flex;
+  align-items: center;
+  background: #000000;
+  padding: 8px 20px;
+  border-radius: 45px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Avenir-Black';
+}
+.more_info a img {
+  width: 20px;
+  margin-left: 10px;
+}
+.more_info h5 {
+  margin-bottom: 7px;
+}
+.times_x {
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.fvrt_icon {
+  margin: 0;
+  margin-right: 10px;
+}
+.card_item_box {
+  padding-top: 15px;
+  border-top: 1px solid #000;
+  margin-top: 17px;
+}
+.card_item_box:first-child {
+ border:none;
+ margin-top: 0;
+ padding-top: 0;
+}
+.confirm_btn.btn_favorite {
+  margin-bottom: 30px;
+}
+.betting__title.fast_bet_title h2 {
+  padding-left: 25px;
+}
+
+
+
+
+.keypad_box {
+  background: #e1ac25;
+  /*position: sticky;*/
+  padding: 15px 10px;
+  /*bottom: 0;*/
+  /*bottom: -100%;*/
+  width: 100%;
+  /*left: 0;*/
+  z-index: 999 !important;
+  transition: .4s ease-in-out;
+  display: none;
+  opacity: 1;
+  visibility: visible;
+}
+/*.keypad_box.active {*/
+/*  opacity: 1;*/
+/*  visibility: visible;*/
+/*  bottom: 0;*/
+/*}*/
+.keypad_button ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-gap: 5px;
+}
+.keypad_button ul li {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 70px;
+  padding: 5px;
+  font-size: 40px;
+  line-height: 1;
+  font-family: 'Avenir-book';
+  cursor: pointer;
+}
+.button_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.btn_icon {
+  max-height: 25px;
+}
+.keypad_top {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  margin-bottom: 15px;
+}
+.keypad_top h4 {
+  color: #000;
+  margin: 0;
+  font-family: 'Avenir-black';
+  margin-right:70px;
+  padding-left: 5px;
+}
+.keypad_arrow img {
+  width: 45px;
+}
+.keypad_arrow  {
+  cursor: pointer;
+}
+.btn_txt {
+  font-size: 24px;
+}
+body.active {
+  padding-bottom: 300px;
+  transition: .3s;
+}
+
+.keypad_top.fast_betting_keypad {
+  justify-content: center;
+}
+img.btn_arrow {
+  width: 45px;
+}
+.choose_filed select {
+  text-align: left;
+}
+.with_black{
+  position: relative;
+  z-index: 1;
+}
+.with_black:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  content: '';
+  height: 40%;
+  width: 100%;
+  z-index: -1;
+}
+
+.icon_box {
+  width: 80px;
+  text-align: center;
+  position: relative;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+
+
+
+.logo_1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: .3s;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.logo_2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: .3s;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.icon_box.active .logo_1 {
+  opacity: 0;
+  visibility: hidden;
+}
+.icon_box.active .logo_2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bet_bx {
+  position: relative;
+  transition: .3s;
+  cursor: pointer;
+}
+.bk_1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+}
+.bk_2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+.bet_bx {
+  width: 12.5%;
+  height: 40px;
+}
+.bet_bx.active .bk_1 {
+  opacity: 0;
+  visibility: hidden;
+}
+.bet_bx.active .bk_2 {
+  opacity: 1;
+  visibility: visible;
+}
+.betting_company .bet_bx {
+  width: 50px;
+  height: 50px;
+}
+.pro_content {
+  padding: 0 15px;
+}
+.keypad_button ul li a {
+  color: #fff;
+  line-height: 0;
+}
+
+
+
+
+
+
+
+
+
+/*-------- Custom CheckBox Style Start --------*/
+/* The container */
+.codeplay-ck .container-ck {
+  display: block;
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+/* Hide the browser's default checkbox */
+.codeplay-ck .container-ck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.codeplay-ck .checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 16px;
+width: 18px;
+background-color: #8e8e8e;
+border: 1px solid #8e8e8e;
+}
+
+/* On mouse-over, add a grey background color */
+.codeplay-ck .container-ck:hover input ~ .checkmark {
+
+}
+
+/* When the checkbox is checked, add a blue background */
+.codeplay-ck .container-ck input:checked ~ .checkmark {
+  background-color: #e2ac0c;
+  border-color:#e2ac0c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.codeplay-ck .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.codeplay-ck .container-ck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.codeplay-ck .container-ck .checkmark::after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.codeplay-ck .container-ck p {
+margin: 0;
+padding: 0;
+font-size: 16px;
+letter-spacing: .3px;
+font-weight: 400;
+position: relative;
+top: -4px;
+}
+.table_check {
+  margin-left: 5px;
+}
+/*-------- Custom CheckBox Style Start --------*/
+
+.fast_bet input::placeholder {
+  opacity: 1;
+  color: #000;
+}
+.noposition {
+  position: relative;
+  font-style: normal;
+  top: 8px;
+}
+.fullstop {
+  font-style: normal;
+  font-size: 70px;
+  line-height: 0;
+  position: relative;
+  top: -5px;
+}
