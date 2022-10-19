@@ -149,10 +149,31 @@ h5 {
   padding: 13px 50px;
 }
 
+.btn-login.small-btn {
+  padding: 12px;
+}
+
+.btn-login.small-btn1 {
+  padding: 12px;
+  height: 40px;
+  min-width: 120px;
+  margin-top: 16px;
+}
+
 .btn-login .txt {
   color: #000;
   font-family: "Avenir-black";
   font-size: 24px;
+}
+
+.handi-txt {
+  text-transform: capitalize;
+  color: #000;
+  /* margin-bottom: 16px; */
+}
+
+.title-margin-Bottom {
+  margin-bottom: 16px;
 }
 
 .btn-login:before {
@@ -329,7 +350,7 @@ h5 {
   padding: 0 15%;
 }
 .detail-content .handi-column .tile-yellow {
-  border: 1px solid #ffd200;
+  border: 1px solid #c29129;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -388,12 +409,38 @@ h5 {
   color: red;
 }
 
+.txt-yell {
+  text-transform: capitalize;
+  color: #c29129;
+  font-family: "Avenir-black";
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 5px;
+  display: block;
+}
+.handi-input {
+  height: 37px;
+  min-width: 220px;
+  margin-top: -14px;
+  border-radius: 10px;
+  border-width: 0.9px;
+  margin-right: 10px;
+}
+.space-between {
+  justify-content: space-between;
+}
+
 .detail-content .section .item-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
   padding: 5px 0;
+}
+
+.detail-content .section .column .capsule .txt {
+  color: #000;
+  font-family: "Avenir-roman";
 }
 
 .detail-content .section .handi-item-section {
@@ -409,7 +456,7 @@ h5 {
   padding: 2px 0;
 }
 .tile-yellow .tile-y-section-2 {
-  background-color: #ffd200;
+  background-color: #c29129;
   padding: 2px 0;
 }
 .detail-content .section .handi-item-section .tile-yellow .txt {
@@ -426,6 +473,141 @@ h5 {
   padding: 0 5px;
 }
 
+.bottom-section {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.column-big-1 {
+  width: 43%;
+}
+.column-big-2 {
+  width: 57%;
+  padding-left: 40px;
+  padding-right: 70px;
+}
+
+.big-capsule {
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.big-capsule-txt {
+  font-size: 22px;
+  line-height: 25px;
+  display: block;
+  text-transform: uppercase;
+  color: #000;
+  font-family: Avenir-roman;
+}
+
+.detail-btn {
+  text-align: end;
+  padding: 16px 70px;
+}
+
+/* modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 30%;
+  height: 47%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-container {
+  height: 100vh;
+}
+
+.modal-container .upper-section {
+  background-color: #c29129;
+  height: 13%;
+  padding: 16px;
+}
+
+.modal-container .lower-section {
+  background-color: #fff;
+  padding: 20px;
+  text-align: start;
+  /* height: 20%; */
+}
+
+.modal-content .title {
+  color: #000;
+  font-size: 16px;
+  line-height: 19px;
+  display: block;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-family: "Avenir-black";
+}
+.minus-margin {
+  margin-bottom: -10px;
+}
+
+.display-row {
+  display: flex;
+  align-items: center;
+}
+
+.display-row-payout {
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+  padding-right: 30px;
+}
+
+.modal-content .txt {
+  color: #000;
+  font-size: 14px;
+  line-height: 17px;
+  display: block;
+  text-transform: uppercase;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* modal */
+
+.detail-content .bottom-section .txt {
+  font-size: 22px;
+  line-height: 25px;
+  display: block;
+  text-transform: capitalize;
+  color: #fff;
+}
 .detail-content .item-section .column .item-txt {
   font-size: 16px;
   line-height: 19px;
@@ -440,6 +622,7 @@ h5 {
   height: 20px;
   width: 40%;
   /* align-self: center; */
+  padding: 5px 0;
   margin-left: 80px;
   border-radius: 10px;
 }

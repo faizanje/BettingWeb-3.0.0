@@ -77,7 +77,9 @@
                       <span class="txt item-txt">4.5</span>
                     </div>
                     <div class="column">
-                      <div class="capsule"></div>
+                      <div class="capsule">
+                        <span class="txt">10</span>
+                      </div>
                     </div>
                   </div>
                   <!-- 2 -->
@@ -221,7 +223,7 @@
                       <span class="txt item-txt">6</span>
                     </div>
                     <div class="column">
-                      <div class="capsule"></div>
+                      <div class="capsule"><span class="txt">10</span></div>
                     </div>
                   </div>
                   <!-- 2 -->
@@ -365,7 +367,7 @@
                       <span class="txt item-txt">6</span>
                     </div>
                     <div class="column">
-                      <div class="capsule"></div>
+                      <div class="capsule"><span class="txt">10</span></div>
                     </div>
                   </div>
                   <!-- 2 -->
@@ -440,10 +442,10 @@
                   <!-- 1 -->
                   <div class="item-section">
                     <div class="column">
-                      <span class="txt txt-yellow item-txt">0-1</span>
+                      <span class="txt txt-yellow item-txt">Leeds United</span>
                     </div>
                     <div class="column">
-                      <span class="txt item-txt">6</span>
+                      <span class="txt item-txt">2</span>
                     </div>
                     <div class="column">
                       <div class="capsule"></div>
@@ -452,10 +454,10 @@
                   <!-- 2 -->
                   <div class="item-section">
                     <div class="column">
-                      <span class="txt txt-yellow item-txt">0-2</span>
+                      <span class="txt txt-yellow item-txt">Aton Villa</span>
                     </div>
                     <div class="column">
-                      <span class="txt item-txt">13</span>
+                      <span class="txt item-txt">3.1</span>
                     </div>
                     <div class="column">
                       <div class="capsule"></div>
@@ -464,14 +466,32 @@
                   <!-- 3 -->
                   <div class="item-section">
                     <div class="column">
-                      <span class="txt txt-yellow item-txt">1-2</span>
+                      <span class="txt txt-yellow item-txt">Draw</span>
                     </div>
                     <div class="column">
-                      <span class="txt item-txt">9</span>
+                      <span class="txt item-txt">2.8</span>
                     </div>
                     <div class="column">
                       <div class="capsule"></div>
                     </div>
+                  </div>
+
+                  <div class="bottom-section">
+                    <div class="column-big-1">
+                      <span class="txt item-txt">Total bet amount</span>
+                    </div>
+
+                    <div class="column-big-2">
+                      <div class="big-capsule">
+                        <span class="big-capsule-txt">rm</span>
+                        <span class="big-capsule-txt">20</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-btn">
+                  <div class="btn-login">
+                    <span class="txt">Bet</span>
                   </div>
                 </div>
               </div>
@@ -495,7 +515,7 @@
 
                 <div class="handi-row">
                   <div class="handi-column">
-                    <div class="tile-yellow">
+                    <div class="tile-yellow" id="myBtn">
                       <div class="tile-y-section-1">
                         <span class="txt">+0.5</span>
                       </div>
@@ -658,7 +678,7 @@
 
                 <div class="handi-row">
                   <div class="handi-column">
-                    <div class="tile-yellow">
+                    <div class="tile-yellow" id="myBtn">
                       <div class="tile-y-section-1">
                         <span class="txt">+0.5</span>
                       </div>
@@ -706,6 +726,69 @@
           </div>
         </div>
         <!-- Tab -->
+
+        <!-- Modal -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-container">
+              <div class="upper-section">
+                <strong class="title minus-margin"
+                  >leeds united vs auston villa</strong
+                ><br />
+                <span class="txt">english premier league</span>
+              </div>
+              <div class="lower-section">
+                <strong class="title title-margin-Bottom">full time</strong>
+                <span class="handi-txt">Handicap : 0.25 @ 0 - 0</span><br />
+                <span class="txt-yell">leeds united @ +89</span>
+
+                <div class="display-row">
+                  <input type="text" class="handi-input" />
+                  <div class="btn-login small-btn1">
+                    <span class="txt">Bet</span>
+                  </div>
+                </div>
+                <div class="display-row-payout space-between">
+                  <span class="txt">Max Payout</span>
+                  <span class="txt">20 x 0.89 = 38.80</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal
+          btn.onclick = function () {
+            modal.style.display = "block";
+          };
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          };
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
       </div>
     </div>
   </body>
