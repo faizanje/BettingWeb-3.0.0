@@ -68,6 +68,7 @@ h5 {
 #wrapper {
   overflow: hidden;
   position: relative;
+  padding-bottom: 130px;
 }
 .page-header {
   /* background-color: red; */
@@ -113,8 +114,8 @@ h5 {
 
 .head-bell {
   position: absolute;
-  right: 20%;
-  top: 140px;
+  right: 18%;
+  top: 145px;
   width: 70px;
   height: 70px;
 }
@@ -426,10 +427,23 @@ h5 {
   align-items: center;
 }
 .modal-cross {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: absolute;
   right: 400px;
+}
+.small-count {
+  color: #fff;
+}
+.green-title {
+  color: #36f501;
+}
+.modal-refresh {
+  height: 25px;
+  /* float: right; */
+  position: absolute;
+  right: 40px;
+  top: 20px;
 }
 .receipt-box .header .heading {
   font-size: 22px;
@@ -806,6 +820,7 @@ h5 {
   background-color: #c29129;
   height: 13%;
   padding: 16px;
+  position: relative;
 }
 
 .modal-container .lower-section {
