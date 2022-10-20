@@ -30,6 +30,8 @@ body {
   color: #fff;
   font-family: "Avenir-roman";
   background-color: #282828;
+  background: url("../img/bg-img01.jpg") no-repeat;
+  background-size: cover;
   /* overflow: hidden; */
 }
 
@@ -62,7 +64,18 @@ h5 {
   overflow: hidden;
   position: relative;
 }
+.page-header {
+  /* background-color: red; */
+  text-align: center;
+  padding: 50px 10px 10px;
+}
 .container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.first-container {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
@@ -144,9 +157,12 @@ h5 {
     #eeca59 100%
   );
 }
-
 .btn-login.big-btn {
   padding: 13px 50px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .btn-login.small-btn {
