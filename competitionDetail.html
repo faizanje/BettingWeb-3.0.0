@@ -17,18 +17,19 @@
           alt="Premier Logo"
         />
         <span class="page-title">soccer score</span>
-        <img
-          class="head-cross"
-          src="./assets/img/header-cross.png"
-          alt="Premier Logo"
-        />
+        <a onclick="goBack()"><img
+                class="head-cross"
+                src="./assets/img/header-cross.png"
+                alt="Premier Logo"
+        /></a>
+
       </div>
       <!-- </div> -->
       <div class="container">
         <div class="detail-header">
           <img
-            class="head-bell"
-            src="./assets/img/notification.png"
+            id="bell"
+            class="head-bell bell-on"
             alt="Premier Logo"
           />
           <div class="column">
@@ -916,12 +917,15 @@
 
           // When the user clicks anywhere outside of the modal, close it
           window.onclick = function (event) {
-            if (event.target == modal) {
+            if (event.target === modal) {
               modal.style.display = "none";
             }
           };
         </script>
       </div>
     </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

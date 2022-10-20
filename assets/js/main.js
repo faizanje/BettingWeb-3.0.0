@@ -27,6 +27,12 @@ var lastScrolledPos;
     };
 })(jQuery);
 
+$('#bell').click(function () {
+    console.log('Clicked')
+    $(this).toggleClass("bell-on bell-off");
+
+})
+
 $(".info_icn").click(function () {
     $(".betting_simple").addClass("active");
     lastScrolledPos = document.documentElement.scrollTop

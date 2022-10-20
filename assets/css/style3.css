@@ -104,6 +104,15 @@ h5 {
   width: 40px;
   height: 40px;
 }
+
+.bell-on{
+  content: url("../img/bell-yellow.png");
+}
+
+
+.bell-off{
+  content: url("../img/notification.png");
+}
 .head-question {
   position: absolute;
   left: 20%;
@@ -114,10 +123,13 @@ h5 {
 
 .head-bell {
   position: absolute;
-  right: 18%;
-  top: 145px;
-  width: 70px;
-  height: 70px;
+  right: -50px;
+  top: -60px;
+  /*left: 0;*/
+  /*right: 18%;*/
+  /*top: 145px;*/
+  /*width: 70px;*/
+  /*height: 70px;*/
 }
 
 .form-input {
@@ -315,6 +327,7 @@ h5 {
 }
 
 .detail-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
