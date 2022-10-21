@@ -955,6 +955,34 @@ h5 {
     font-size: 20px;
     line-height: 26px;
   }
+  .detail-header .column {
+    width: 160px;
+  }
+  .page-title {
+    font-size: 25px;
+    line-height: 28px;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    margin-right: 30px;
+    font-family: "Avenir-black";
+  }
+  .head-question {
+    left: 3%;
+    width: 30px;
+    height: 30px;
+  }
+  .head-cross {
+    width: 30px;
+    height: 30px;
+  }
+  .head-bell {
+    position: absolute;
+    right: 1%;
+    top: 130px;
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -1007,6 +1035,9 @@ h5 {
     flex-grow: 1;
     padding: 0 13px;
     color: red;
+  }
+  .detail-header .column {
+    width: 100px;
   }
 }
 

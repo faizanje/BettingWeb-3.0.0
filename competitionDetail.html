@@ -867,11 +867,13 @@
                 <strong class="title minus-margin"
                   >leeds united vs auston villa</strong
                 ><br />
-                <img
-                  class="modal-refresh"
-                  src="./assets/img/refresh.png"
-                  alt="Premier Logo"
-                />
+                <a href="javascript:close()">
+                  <img
+                    class="modal-refresh"
+                    src="./assets/img/refresh.png"
+                    alt="Premier Logo"
+                  />
+                </a>
                 <span class="txt">english premier league</span>
               </div>
               <div class="lower-section">
@@ -914,6 +916,9 @@
           span.onclick = function () {
             modal.style.display = "none";
           };
+          function close() {
+            modal.style.display = "none";
+          }
 
           // When the user clicks anywhere outside of the modal, close it
           window.onclick = function (event) {
