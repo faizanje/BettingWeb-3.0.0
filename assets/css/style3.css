@@ -91,11 +91,29 @@ h5 {
 .page-title {
   font-size: 36px;
   line-height: 39px;
-  display: block;
   text-transform: uppercase;
+  display: block;
   color: #fff;
   margin-right: 70px;
   /* font-family: "Avenir-black"; */
+}
+
+.page-title.title2 {
+  display: none;
+}
+.page-title.title3 {
+  display: none;
+}
+
+body.title-active2 .page-title.title1,
+body.title-active3 .page-title.title1 {
+  display: none;
+}
+body.title-active2 .page-title.title2 {
+  display: block;
+}
+body.title-active3 .page-title.title3 {
+  display: block;
 }
 .head-cross {
   /* position: absolute;
@@ -948,7 +966,6 @@ h5 {
   .page-title {
     font-size: 25px;
     line-height: 28px;
-    display: block;
     text-transform: uppercase;
     color: #fff;
     margin-right: 30px;

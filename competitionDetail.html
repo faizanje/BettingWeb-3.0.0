@@ -16,7 +16,9 @@
           src="./assets/img/question.png"
           alt="Premier Logo"
         />
-        <span class="page-title">soccer score</span>
+        <span class="page-title title1">correct score</span>
+        <span class="page-title title2">handicap & over/under</span>
+        <span class="page-title title3">summary</span>
         <img
           class="head-cross"
           src="./assets/img/header-cross.png"
@@ -903,6 +905,24 @@
           // Get the button that opens the modal
           var btn = document.getElementById("myBtn");
 
+          var input1 = document.getElementById("tab1");
+          input1.onclick = function () {
+            document.body.classList.remove("title-active2");
+            document.body.classList.remove("title-active3");
+            document.body.classList.add("title-active1");
+          };
+          var input2 = document.getElementById("tab2");
+          input2.onclick = function () {
+            document.body.classList.remove("title-active1");
+            document.body.classList.remove("title-active3");
+            document.body.classList.add("title-active2");
+          };
+          var input3 = document.getElementById("tab3");
+          input3.onclick = function () {
+            document.body.classList.remove("title-active1");
+            document.body.classList.remove("title-active2");
+            document.body.classList.add("title-active3");
+          };
           // Get the <span> element that closes the modal
           var span = document.getElementsByClassName("close")[0];
 
