@@ -648,7 +648,7 @@
 
                 <div class="handi-row">
                   <div class="handi-column">
-                    <div class="tile-yellow">
+                    <div class="tile-yellow" id="myBtn1">
                       <div class="tile-y-section-1">
                         <span class="txt">+0.5</span>
                       </div>
@@ -898,12 +898,55 @@
         </div>
         <!-- Modal -->
 
+        <!-- The Modal -->
+        <div id="myModal1" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <!-- <span class="close">&times;</span> -->
+
+            <div class="modal-container">
+              <div class="upper-section">
+                <strong class="title minus-margin"
+                  >leeds united vs auston villa</strong
+                ><br />
+                <a href="javascript:close()">
+                  <img
+                    class="modal-refresh"
+                    src="./assets/img/refresh.png"
+                    alt="Premier Logo"
+                  />
+                </a>
+                <span class="txt">english premier league</span>
+              </div>
+              <div class="lower-section">
+                <strong class="title title-margin-Bottom">full time</strong>
+                <span class="handi-txt">over / under : 0.25 @ 0 - 0</span><br />
+                <span class="txt-yell">leeds united @ +89</span>
+
+                <div class="display-row">
+                  <input type="text" class="handi-input" placeholder="20" />
+                  <div class="btn-login small-btn1">
+                    <span class="txt">Bet</span>
+                  </div>
+                </div>
+                <div class="display-row-payout space-between">
+                  <span class="txt">Max Payout</span>
+                  <span class="txt">20 x 0.89 = 38.80</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+
         <script>
           // Get the modal
           var modal = document.getElementById("myModal");
+          var modal1 = document.getElementById("myModal1");
 
           // Get the button that opens the modal
           var btn = document.getElementById("myBtn");
+          var btn1 = document.getElementById("myBtn1");
 
           var input1 = document.getElementById("tab1");
           input1.onclick = function () {
@@ -931,18 +974,25 @@
             modal.style.display = "block";
           };
 
+          btn1.onclick = function () {
+            modal1.style.display = "block";
+          };
+
           // When the user clicks on <span> (x), close the modal
           span.onclick = function () {
             modal.style.display = "none";
+            modal1.style.display = "none";
           };
           function close() {
             modal.style.display = "none";
+            modal1.style.display = "none";
           }
 
           // When the user clicks anywhere outside of the modal, close it
           window.onclick = function (event) {
             if (event.target == modal) {
               modal.style.display = "none";
+              modal1.style.display = "none";
             }
           };
         </script>
