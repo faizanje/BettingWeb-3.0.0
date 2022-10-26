@@ -79,6 +79,29 @@ h5 {
   align-items: center;
 }
 
+.main_wrapper-2{
+  flex: 1;
+  overflow: auto;
+  /*max-width: 767px;*/
+  /*padding: 0 15px;*/
+  margin: 0 auto;
+  /*margin-bottom: 1000px;*/
+  position: relative;
+  /*height: 100%;*/
+  /*padding-top: 30px;*/
+  /*background-color: #000;*/
+}
+
+.bg_image{
+  background-color: #000;
+  background-image: url(../img/main-bg2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.bg-header{
+  background: url("../img/bg-header.jpg") no-repeat;
+}
+
 .header-bg {
   background: url("../img/bg-header.jpg") no-repeat;
   background-size: cover;
@@ -88,14 +111,23 @@ h5 {
   justify-content: center;
   align-items: center;
 }
+/*.page-title {*/
+/*  font-size: 36px;*/
+/*  line-height: 39px;*/
+/*  text-transform: uppercase;*/
+/*  display: block;*/
+/*  color: #fff;*/
+/*  margin-right: 70px;*/
+/*  !* font-family: "Avenir-black"; *!*/
+/*}*/
+
 .page-title {
-  font-size: 36px;
-  line-height: 39px;
+  font-size: 25px;
+  line-height: 28px;
   text-transform: uppercase;
-  display: block;
   color: #fff;
-  margin-right: 70px;
-  /* font-family: "Avenir-black"; */
+  margin-right: 30px;
+  /*font-family: "Avenir-black", serif;*/
 }
 
 .page-title.title2 {
@@ -132,11 +164,12 @@ body.title-active3 .page-title.title3 {
   content: url("../img/notification.png");
 }
 .head-question {
-  position: absolute;
-  left: 20%;
-  top: 92px;
+  /*position: absolute;*/
+  /*left: 20%;*/
+  /*top: 92px;*/
   width: 40px;
   height: 40px;
+  margin-right: 1rem;
 }
 
 .head-bell {
@@ -938,6 +971,18 @@ body.title-active3 .page-title.title3 {
 }
 
 @media screen and (max-width: 799px) {
+
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 60%;
+    height: 47%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
   .card-header .logo {
     width: 230px;
     margin: 0 auto 15px;
@@ -977,14 +1022,14 @@ body.title-active3 .page-title.title3 {
   .detail-header .column {
     width: 160px;
   }
-  .page-title {
-    font-size: 25px;
-    line-height: 28px;
-    text-transform: uppercase;
-    color: #fff;
-    margin-right: 30px;
-    font-family: "Avenir-black", serif;
-  }
+  /*.page-title {*/
+  /*  font-size: 25px;*/
+  /*  line-height: 28px;*/
+  /*  text-transform: uppercase;*/
+  /*  color: #fff;*/
+  /*  margin-right: 30px;*/
+  /*  font-family: "Avenir-black", serif;*/
+  /*}*/
   .head-question {
     left: 3%;
     width: 30px;
@@ -1004,6 +1049,17 @@ body.title-active3 .page-title.title3 {
 }
 
 @media screen and (max-width: 575px) {
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 80%;
+    height: 47%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
   .card-header {
     text-align: center;
     background-color: #000;

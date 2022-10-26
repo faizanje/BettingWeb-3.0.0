@@ -6,7 +6,7 @@ var lastScrolledPos;
     'use strict';
 
     $.fn.scrollToSimple = function ($target) {
-        var $container = this.first();      // Only scrolls the first matched container
+        const $container = this.first();      // Only scrolls the first matched container
 
         var pos = $target.position(), height = $target.outerHeight();
         var containerScrollTop = $container.scrollTop(), containerHeight = $container.height();
@@ -19,8 +19,7 @@ var lastScrolledPos;
                 scrollTop: top - paddingPx
             })// scroll up
             // $container.scrollTop(top - paddingPx);
-        }
-        else if (top + height > containerScrollTop + containerHeight) {     // scroll down
+        } else if (top + height > containerScrollTop + containerHeight) {     // scroll down
             $container.animate({scrollTop: top + height - containerHeight + paddingPx});
             // $container.scrollTop(top + height - containerHeight + paddingPx);
         }
@@ -32,6 +31,29 @@ $('#bell').click(function () {
     $(this).toggleClass("bell-on bell-off");
 
 })
+
+$('.clickable-handicap-item').click(function () {
+    showModalDialog('Handicap')
+})
+
+$('.clickable-overunder-item').click(function () {
+    showModalDialog('Over/Under')
+})
+
+function showModalDialog(title) {
+    window.sessionStorage.setItem("betTitle",title)
+    $('.modal-title').html(title)
+    console.log($('.modal-title').html())
+    console.log($('.handi-txt').html(title + ' :0.25 @ 0 - 0'))
+    $('#myModal').show()
+}
+
+
+function hideModalDialog() {
+    $('#myModal').hide()
+
+}
+
 
 $(".info_icn").click(function () {
     $(".betting_simple").addClass("active");
@@ -51,6 +73,7 @@ $(".times_x").click(function () {
     $(".betting_simple").removeClass("active");
 });
 
+
 $(document).click(function (event) {
         // Detecting click outside the keyboard
         const container = $(".keypad_box");
@@ -61,12 +84,22 @@ $(document).click(function (event) {
         ) {
             hideKeyboard();
         }
+
+        const dialog = $("#myModal");
+        if (
+            (!dialog.is(event.target) && !dialog.has(event.target).length)
+        ) {
+            // hideModalDialog();
+        }
+
+
     }
 );
 
 $(function () {
     simpleBettingHandler('simple-betting-1');
     populateImagesProgrammatically();
+    populateBetTitle();
 })
 
 $(".numpad-btn").click(function (event) {
@@ -148,7 +181,7 @@ function showKeyboard() {
 
     showAnimate(".keypad_box");
 
-    $('#main').scrollToSimple( $(currentFocusedInput) );
+    $('#main').scrollToSimple($(currentFocusedInput));
 }
 
 function hideAnimate(id, callback) {
@@ -176,12 +209,20 @@ function hideAnimate(id, callback) {
 
 function hideKeyboard() {
 
-    hideAnimate(".keypad_box", ()=>{
+    hideAnimate(".keypad_box", () => {
         $(".cost_wrapper").show()
     });
 
 }
 
+
+function populateBetTitle(){
+    const title =  window.sessionStorage.getItem("betTitle")
+    if(title){
+        console.log(title)
+        $('#bet-title').html(title)
+    }
+}
 function populateImagesProgrammatically() {
     const arr = getImagesArray()
     arr.forEach(function (image) {

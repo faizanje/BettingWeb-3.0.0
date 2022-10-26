@@ -1,864 +1,867 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pro betting</title>
-    <link rel="stylesheet" href="assets/css/style3.css" />
-  </head>
-  <body>
-    <div id="wrapper">
-      <!-- <div class="page-header"> -->
-      <div class="header-bg">
+    <link rel="stylesheet" href="assets/css/style3.css"/>
+<!--    <link rel="stylesheet" href="assets/css/style.css">-->
+
+</head>
+<body>
+<!--class="bg_image main_wrapper-2"-->
+<div id="wrapper">
+<!--    class="header-bg"-->
+    <div class="page-header">
         <img
-          class="head-question"
-          src="./assets/img/question.png"
-          alt="Premier Logo"
+                class="head-question"
+                src="./assets/img/question.png"
+                alt="Premier Logo"
         />
-        <span class="page-title title1">correct score</span>
-        <span class="page-title title2">handicap & over/under</span>
-        <span class="page-title title3">summary</span>
-        <img
-          class="head-cross"
-          src="./assets/img/header-cross.png"
-          alt="Premier Logo"
-        />
-        <span class="page-title">soccer score</span>
+        <div>
+            <span class="page-title title1">correct score</span>
+            <span class="page-title title2">handicap & over/under</span>
+            <span class="page-title title3">summary</span>
+            <!--        <img-->
+            <!--          class="head-cross"-->
+            <!--          src="./assets/img/header-cross.png"-->
+            <!--          alt="Premier Logo"-->
+            <!--        />-->
+            <!--        <span class="page-title">soccer score</span>-->
+        </div>
         <a onclick="goBack()"><img
                 class="head-cross"
                 src="./assets/img/header-cross.png"
                 alt="Premier Logo"
         /></a>
-
-      </div>
-      <!-- </div> -->
-      <div class="container">
+    </div>
+    <div class="container">
         <div class="detail-header">
-          <img
-            id="bell"
-            class="head-bell bell-on"
-            alt="Premier Logo"
-          />
-          <div class="column">
-            <strong class="title">Leeds<br />United</strong>
-            <span class="txt">Home</span>
-          </div>
-          <div class="column">
-            <span class="title score">0 - 0</span>
-            <span class="txt1 txt-red">2h90'</span>
-            <span class="txt txt-green">Neutral ground(N)</span>
-          </div>
-          <div class="column">
-            <strong class="title">Aston<br />Villa</strong>
-            <span class="txt txt-red">Away</span>
-          </div>
+            <img
+                    id="bell"
+                    class="head-bell bell-on"
+                    alt="Premier Logo"
+            />
+            <div class="column">
+                <strong class="title">Leeds<br/>United</strong>
+                <span class="txt">Home</span>
+            </div>
+            <div class="column">
+                <span class="title score">0 - 0</span>
+                <span class="txt1 txt-red">2h90'</span>
+                <span class="txt txt-green">Neutral ground(N)</span>
+            </div>
+            <div class="column">
+                <strong class="title">Aston<br/>Villa</strong>
+                <span class="txt txt-red">Away</span>
+            </div>
         </div>
 
         <!-- Tab -->
         <div class="tabset">
-          <!-- Tab 1 -->
-          <input
-            type="radio"
-            name="tabset"
-            id="tab1"
-            aria-controls="correct-score"
-            checked
-          />
-          <label for="tab1">Correct Score</label>
-          <!-- Tab 2 -->
-          <input
-            type="radio"
-            name="tabset"
-            id="tab2"
-            aria-controls="handicap"
-          />
-          <label for="tab2"
-            >Handicap & <br />
-            Over/Under</label
-          >
-          <!-- Tab 3 -->
-          <input type="radio" name="tabset" id="tab3" aria-controls="summary" />
-          <label for="tab3">Summary</label>
+            <!-- Tab 1 -->
+            <input
+                    type="radio"
+                    name="tabset"
+                    id="tab1"
+                    aria-controls="correct-score"
+                    checked
+            />
+            <label for="tab1">Correct Score</label>
+            <!-- Tab 2 -->
+            <input
+                    type="radio"
+                    name="tabset"
+                    id="tab2"
+                    aria-controls="handicap"
+            />
+            <label for="tab2"
+            >Handicap & <br/>
+                Over/Under</label
+            >
+            <!-- Tab 3 -->
+            <input type="radio" name="tabset" id="tab3" aria-controls="summary"/>
+            <label for="tab3">Summary</label>
 
-          <div class="tab-panels">
-            <section id="correct-score" class="tab-panel">
-              <div class="detail-content">
-                <div class="section">
-                  <strong class="title">Leeds United</strong>
-                  <div class="small-title-section">
-                    <div class="column">
-                      <span class="txt txt-yellow">score</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">pay</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">amount</span>
-                    </div>
-                  </div>
-                  <!-- 1 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">1-0</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">4.5</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" placeholder="10" />
-                    </div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">2-0</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">8</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">2-1</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">6.5</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
+            <div class="tab-panels">
+                <section id="correct-score" class="tab-panel">
+                    <div class="detail-content">
+                        <div class="section">
+                            <strong class="title">Leeds United</strong>
+                            <div class="small-title-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow">score</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">pay</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">amount</span>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">1-0</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">4.5</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text" placeholder="10"/>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">2-0</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">8</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">2-1</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">6.5</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                  <!-- 4 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">3-0</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">18</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
+                            <!-- 4 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">3-0</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">18</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                  <!-- 5 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">3-1</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">18</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
+                            <!-- 5 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">3-1</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">18</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                  <!-- 1 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">3-2</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">31</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">4-0</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">48</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">4-1</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">38</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
+                            <!-- 1 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">3-2</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">31</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">4-0</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">48</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">4-1</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">38</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                  <!-- 4 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">4-2</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">62</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
+                            <!-- 4 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">4-2</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">62</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                  <!-- 5 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">4-3</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">145</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Content 2 -->
-
-              <div class="detail-content">
-                <div class="section">
-                  <strong class="title">aston villa</strong>
-                  <div class="small-title-section">
-                    <div class="column">
-                      <span class="txt txt-yellow">score</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">pay</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">amount</span>
-                    </div>
-                  </div>
-                  <!-- 1 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-1</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">6</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" placeholder="10" />
-                    </div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-2</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">13</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">1-2</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">9</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 4 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-3</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">31</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 5 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">1-3</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">26</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 1 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">23</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">38</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-4</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">77</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">1-4</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">62</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 4 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">2-4</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">77</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 5 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">3-4</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">145</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Content 3 -->
-
-              <div class="detail-content">
-                <div class="section">
-                  <strong class="title">draw</strong>
-                  <div class="small-title-section">
-                    <div class="column">
-                      <span class="txt txt-yellow">score</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">pay</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">amount</span>
-                    </div>
-                  </div>
-                  <!-- 1 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-1</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">6</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" placeholder="10" />
-                    </div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-2</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">13</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">1-2</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">9</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 4 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">0-3</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">31</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <!-- 5 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">1-3</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">26</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Content 4 -->
-
-              <div class="detail-content">
-                <div class="section">
-                  <strong class="title">straight win/draw</strong>
-                  <div class="small-title-section">
-                    <div class="column">
-                      <span class="txt txt-yellow">score</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">pay</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt">amount</span>
-                    </div>
-                  </div>
-                  <!-- 1 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">Leeds United</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">2</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">Aton Villa</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">3.1</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="item-section">
-                    <div class="column">
-                      <span class="txt txt-yellow item-txt">Draw</span>
-                    </div>
-                    <div class="column">
-                      <span class="txt item-txt">2.8</span>
-                    </div>
-                    <div class="column">
-                      <input class="form-input" type="text" />
-                    </div>
-                  </div>
-
-                  <div class="bottom-section">
-                    <div class="column-big-1">
-                      <span class="txt item-txt">Total bet amount</span>
+                            <!-- 5 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">4-3</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">145</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="column-big-2">
-                      <div class="big-capsule">
-                        <span class="big-capsule-txt">rm</span>
-                        <span class="big-capsule-txt">20</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="detail-btn">
-                  <div class="btn-login">
-                    <span class="txt">Bet</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section id="handicap" class="tab-panel">
-              <div class="detail-content">
-                <strong class="title">Handicap</strong>
-                <!-- <div class="section"> -->
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <span class="handitxt txt-yellow">Home</span>
-                  </div>
+                    <!-- Content 2 -->
 
-                  <div class="handi-column">
-                    <span class="handitxt txt-red">Away</span>
-                  </div>
-                </div>
-                <div class="handi-title-section">
-                  <span class="handitxt">Full Time</span>
-                </div>
+                    <div class="detail-content">
+                        <div class="section">
+                            <strong class="title">aston villa</strong>
+                            <div class="small-title-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow">score</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">pay</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">amount</span>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-1</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">6</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text" placeholder="10"/>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-2</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">13</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">1-2</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">9</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow" id="myBtn">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                            <!-- 4 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-3</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">31</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+1</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                            <!-- 5 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">1-3</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">26</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-title-section">
-                  <span class="handitxt">Half Time</span>
-                </div>
+                            <!-- 1 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">23</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">38</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-4</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">77</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">1-4</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">62</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                            <!-- 4 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">2-4</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">77</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+1</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
+                            <!-- 5 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">3-4</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">145</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="detail-content">
-                <strong class="title">over / under</strong>
-                <!-- <div class="section"> -->
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <span class="handitxt txt-yellow">Home</span>
-                  </div>
+                    <!-- Content 3 -->
 
-                  <div class="handi-column">
-                    <span class="handitxt txt-red">Away</span>
-                  </div>
-                </div>
-                <div class="handi-title-section">
-                  <span class="handitxt">Full Time</span>
-                </div>
+                    <div class="detail-content">
+                        <div class="section">
+                            <strong class="title">draw</strong>
+                            <div class="small-title-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow">score</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">pay</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">amount</span>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-1</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">6</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text" placeholder="10"/>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-2</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">13</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">1-2</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">9</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow" id="myBtn1">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                            <!-- 4 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">0-3</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">31</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+1</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
+                            <!-- 5 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">1-3</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">26</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="handi-title-section">
-                  <span class="handitxt">Half Time</span>
-                </div>
+                    <!-- Content 4 -->
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow" id="myBtn2">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    <div class="detail-content">
+                        <div class="section">
+                            <strong class="title">straight win/draw</strong>
+                            <div class="small-title-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow">score</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">pay</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt">amount</span>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">Leeds United</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">2</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">Aton Villa</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">3.1</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="item-section">
+                                <div class="column">
+                                    <span class="txt txt-yellow item-txt">Draw</span>
+                                </div>
+                                <div class="column">
+                                    <span class="txt item-txt">2.8</span>
+                                </div>
+                                <div class="column">
+                                    <input class="form-input" type="text"/>
+                                </div>
+                            </div>
 
-                <div class="handi-row">
-                  <div class="handi-column">
-                    <div class="tile-yellow">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+1</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="handi-column">
-                    <div class="tile-red">
-                      <div class="tile-y-section-1">
-                        <span class="txt">+0.5</span>
-                      </div>
-                      <div class="tile-y-section-2">
-                        <span class="txt">+0.89</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+                            <div class="bottom-section">
+                                <div class="column-big-1">
+                                    <span class="txt item-txt">Total bet amount</span>
+                                </div>
 
-            <section id="summary" class="tab-panel">
-              <div class="table-holder">
-                <div class="row">
-                  <div class="col">23'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Diego Gonzalez</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">23'</div>
-                  <div class="col">0-1</div>
-                  <div class="col name">
-                    <span class="text">Lucas Boye</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col name">
-                    34' <span class="text">Oscar Trejo</span>
-                  </div>
-                  <div class="col"></div>
-                  <div class="col">
-                    <span class="text"></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    40' <span class="text">Sergio Camello</span>
-                  </div>
-                  <div class="col">1-1</div>
-                  <div class="col">
-                    <span class="text"></span>
-                  </div>
-                </div>
-                <div class="row row-foot">
-                  <div class="col">HT</div>
-                  <div class="col">1-1</div>
-                  <div class="col">
-                    <span class="text"></span>
-                  </div>
-                </div>
+                                <div class="column-big-2">
+                                    <div class="big-capsule">
+                                        <span class="big-capsule-txt">rm</span>
+                                        <span class="big-capsule-txt">20</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-btn">
+                            <a class="btn-login" href="betProceed.html">
+                                <span class="txt">Bet</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="handicap" class="tab-panel">
+                    <div class="detail-content">
+                        <strong class="title">Handicap</strong>
+                        <!-- <div class="section"> -->
+                        <div class="handi-row">
+                            <div class="handi-column">
+                                <span class="handitxt txt-yellow">Home</span>
+                            </div>
 
-                <div class="row">
-                  <div class="col">47'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Quina</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">65'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Edgar Badía</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">69'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Lucas Boye</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">81'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Pol Lirola</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">83'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Ezequiel Ponce</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">89'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Tete Morente</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">90+1'</div>
-                  <div class="col"></div>
-                  <div class="col name">
-                    <span class="text">Carlos Clerc</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">95+5'</div>
-                  <div class="col">2+1</div>
-                  <div class="col">
-                    <span class="name"></span>
-                  </div>
-                </div>
-                <div class="row row-foot">
-                  <div class="col">FT'</div>
-                  <div class="col">2-1</div>
-                  <div class="col">
-                    <span class="name">Diego</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
+                            <div class="handi-column">
+                                <span class="handitxt txt-red">Away</span>
+                            </div>
+                        </div>
+                        <div class="handi-title-section">
+                            <span class="handitxt">Full Time</span>
+                        </div>
+
+                        <div class="handi-row ">
+                            <div class="handi-column clickable-handicap-item">
+                                <div class="tile-yellow" id="myBtn">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column clickable-handicap-item">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column clickable-handicap-item">
+                                <div class="tile-yellow">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+1</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column clickable-handicap-item">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="handi-title-section">
+                            <span class="handitxt">Half Time</span>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column">
+                                <div class="tile-yellow">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column">
+                                <div class="tile-yellow">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+1</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-content">
+                        <strong class="title">over / under</strong>
+                        <!-- <div class="section"> -->
+                        <div class="handi-row">
+                            <div class="handi-column">
+                                <span class="handitxt txt-yellow">Home</span>
+                            </div>
+
+                            <div class="handi-column">
+                                <span class="handitxt txt-red">Away</span>
+                            </div>
+                        </div>
+                        <div class="handi-title-section">
+                            <span class="handitxt">Full Time</span>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column clickable-overunder-item">
+                                <div class="tile-yellow" id="myBtn1">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column clickable-overunder-item">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column clickable-overunder-item">
+                                <div class="tile-yellow">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+1</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column clickable-overunder-item">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="handi-title-section">
+                            <span class="handitxt">Half Time</span>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column">
+                                <div class="tile-yellow" id="myBtn2">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="handi-row">
+                            <div class="handi-column">
+                                <div class="tile-yellow">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+1</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="handi-column">
+                                <div class="tile-red">
+                                    <div class="tile-y-section-1">
+                                        <span class="txt">+0.5</span>
+                                    </div>
+                                    <div class="tile-y-section-2">
+                                        <span class="txt">+0.89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="summary" class="tab-panel">
+                    <div class="table-holder">
+                        <div class="row">
+                            <div class="col">23'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Diego Gonzalez</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">23'</div>
+                            <div class="col">0-1</div>
+                            <div class="col name">
+                                <span class="text">Lucas Boye</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col name">
+                                34' <span class="text">Oscar Trejo</span>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                                <span class="text"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                40' <span class="text">Sergio Camello</span>
+                            </div>
+                            <div class="col">1-1</div>
+                            <div class="col">
+                                <span class="text"></span>
+                            </div>
+                        </div>
+                        <div class="row row-foot">
+                            <div class="col">HT</div>
+                            <div class="col">1-1</div>
+                            <div class="col">
+                                <span class="text"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">47'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Quina</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">65'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Edgar Badía</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">69'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Lucas Boye</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">81'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Pol Lirola</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">83'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Ezequiel Ponce</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">89'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Tete Morente</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">90+1'</div>
+                            <div class="col"></div>
+                            <div class="col name">
+                                <span class="text">Carlos Clerc</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">95+5'</div>
+                            <div class="col">2+1</div>
+                            <div class="col">
+                                <span class="name"></span>
+                            </div>
+                        </div>
+                        <div class="row row-foot">
+                            <div class="col">FT'</div>
+                            <div class="col">2-1</div>
+                            <div class="col">
+                                <span class="name">Diego</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
         <!-- Tab -->
 
@@ -866,146 +869,147 @@
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content">
-            <!-- <span class="close">&times;</span> -->
+            <!-- Modal content -->
+            <div class="modal-content">
+                <!-- <span class="close">&times;</span> -->
 
-            <div class="modal-container">
-              <div class="upper-section">
-                <strong class="title minus-margin"
-                  >leeds united vs auston villa</strong
-                ><br />
-                <a href="javascript:close()">
-                  <img
-                    class="modal-refresh"
-                    src="./assets/img/refresh.png"
-                    alt="Premier Logo"
-                  />
-                </a>
-                <span class="txt">english premier league</span>
-              </div>
-              <div class="lower-section">
-                <strong class="title title-margin-Bottom">full time</strong>
-                <span class="handi-txt">Handicap : 0.25 @ 0 - 0</span><br />
-                <span class="txt-yell">leeds united @ +89</span>
+                <div class="modal-container">
+                    <div class="upper-section">
+                        <strong class="title minus-margin"
+                        >leeds united vs auston villa</strong
+                        ><br/>
+                        <a href="javascript:close()">
+                            <img
+                                    class="modal-refresh"
+                                    src="./assets/img/refresh.png"
+                                    alt="Premier Logo"
+                            />
+                        </a>
+                        <span class="txt">english premier league</span>
+                    </div>
+                    <div class="lower-section">
+                        <strong class="title title-margin-Bottom">full time</strong>
+                        <span id='modal-title' class="handi-txt">Handicap :0.25 @ 0 - 0</span><br/>
+                        <span class="txt-yell">leeds united @ +89</span>
 
-                <div class="display-row">
-                  <input type="text" class="handi-input" placeholder="20" />
-                  <div class="btn-login small-btn1">
-                    <span class="txt">Bet</span>
-                  </div>
+                        <div class="display-row">
+                            <input type="text" class="handi-input" placeholder="20"/>
+                            <a class="btn-login small-btn1" href="betProceed.html">
+                                <span class="txt">Bet</span>
+                            </a>
+                        </div>
+                        <div class="display-row-payout space-between">
+                            <span class="txt">Max Payout</span>
+                            <span class="txt">20 x 0.89 = 38.80</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="display-row-payout space-between">
-                  <span class="txt">Max Payout</span>
-                  <span class="txt">20 x 0.89 = 38.80</span>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
         <!-- Modal -->
 
         <!-- The Modal -->
         <div id="myModal1" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content">
-            <!-- <span class="close">&times;</span> -->
+            <!-- Modal content -->
+            <div class="modal-content">
+                <!-- <span class="close">&times;</span> -->
 
-            <div class="modal-container">
-              <div class="upper-section">
-                <strong class="title minus-margin"
-                  >leeds united vs auston villa</strong
-                ><br />
-                <a href="javascript:close()">
-                  <img
-                    class="modal-refresh"
-                    src="./assets/img/refresh.png"
-                    alt="Premier Logo"
-                  />
-                </a>
-                <span class="txt">english premier league</span>
-              </div>
-              <div class="lower-section">
-                <strong class="title title-margin-Bottom">full time</strong>
-                <span class="handi-txt">over / under : 0.25 @ 0 - 0</span><br />
-                <span class="txt-yell">leeds united @ +89</span>
+                <div class="modal-container">
+                    <div class="upper-section">
+                        <strong class="title minus-margin"
+                        >leeds united vs auston villa</strong
+                        ><br/>
+                        <a href="javascript:close()">
+                            <img
+                                    class="modal-refresh"
+                                    src="./assets/img/refresh.png"
+                                    alt="Premier Logo"
+                            />
+                        </a>
+                        <span class="txt">english premier league</span>
+                    </div>
+                    <div class="lower-section">
+                        <strong class="title title-margin-Bottom">full time</strong>
+                        <span class="handi-txt">over / under : 0.25 @ 0 - 0</span><br/>
+                        <span class="txt-yell">leeds united @ +89</span>
 
-                <div class="display-row">
-                  <input type="text" class="handi-input" placeholder="20" />
-                  <div class="btn-login small-btn1">
-                    <span class="txt">Bet</span>
-                  </div>
+                        <div class="display-row">
+                            <input type="text" class="handi-input" placeholder="20"/>
+                            <div class="btn-login small-btn1">
+                                <span class="txt">Bet</span>
+                            </div>
+                        </div>
+                        <div class="display-row-payout space-between">
+                            <span class="txt">Max Payout</span>
+                            <span class="txt">20 x 0.89 = 38.80</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="display-row-payout space-between">
-                  <span class="txt">Max Payout</span>
-                  <span class="txt">20 x 0.89 = 38.80</span>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
         <!-- Modal -->
 
         <script>
-          // Get the modal
-          var modal = document.getElementById("myModal");
+            // Get the modal
+            var modal = document.getElementById("myModal");
 
-          // Get the button that opens the modal
-          var btn = document.getElementById("myBtn");
-          var btn1 = document.getElementById("myBtn1");
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            var btn1 = document.getElementById("myBtn1");
 
-          var input1 = document.getElementById("tab1");
-          input1.onclick = function () {
-            document.body.classList.remove("title-active2");
-            document.body.classList.remove("title-active3");
-            document.body.classList.add("title-active1");
-          };
-          var input2 = document.getElementById("tab2");
-          input2.onclick = function () {
-            document.body.classList.remove("title-active1");
-            document.body.classList.remove("title-active3");
-            document.body.classList.add("title-active2");
-          };
-          var input3 = document.getElementById("tab3");
-          input3.onclick = function () {
-            document.body.classList.remove("title-active1");
-            document.body.classList.remove("title-active2");
-            document.body.classList.add("title-active3");
-          };
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
+            var input1 = document.getElementById("tab1");
+            input1.onclick = function () {
+                document.body.classList.remove("title-active2");
+                document.body.classList.remove("title-active3");
+                document.body.classList.add("title-active1");
+            };
+            var input2 = document.getElementById("tab2");
+            input2.onclick = function () {
+                document.body.classList.remove("title-active1");
+                document.body.classList.remove("title-active3");
+                document.body.classList.add("title-active2");
+            };
+            var input3 = document.getElementById("tab3");
+            input3.onclick = function () {
+                document.body.classList.remove("title-active1");
+                document.body.classList.remove("title-active2");
+                document.body.classList.add("title-active3");
+            };
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-          // When the user clicks the button, open the modal
-          btn.onclick = function () {
-            modal.style.display = "block";
-          };
+            // When the user clicks the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            };
 
-          btn1.onclick = function () {
-            modal1.style.display = "block";
-          };
+            btn1.onclick = function () {
+                // modal1.style.display = "block";
+            };
 
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function () {
-            modal.style.display = "none";
-            modal1.style.display = "none";
-          };
-          function close() {
-            modal.style.display = "none";
-            modal1.style.display = "none";
-          }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+                // modal1.style.display = "none";
+            };
 
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function (event) {
-            if (event.target === modal) {
-              modal.style.display = "none";
-              modal1.style.display = "none";
+            function close() {
+                modal.style.display = "none";
+                // modal1.style.display = "none";
             }
-          };
-        </script>
-      </div>
-    </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target !== modal) {
+                    modal.style.display = "none";
+                    // modal1.style.display = "none";
+                }
+            };
+        </script>
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
