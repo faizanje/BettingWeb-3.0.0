@@ -294,6 +294,11 @@ body.title-active3 .page-title.title3 {
   transform: translateX(-50%);
 }
 
+.right{
+  left: 100% !important;
+  transform: translateX(-110%) !important;;
+}
+
 .btn-login.small-btn {
   padding: 12px;
 }
