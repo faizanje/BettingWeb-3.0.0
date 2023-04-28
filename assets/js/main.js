@@ -96,12 +96,12 @@ $(document).click(function (event) {
     }
 );
 
-$(function () {
-    simpleBettingHandler('simple-betting-1');
-    // populateImagesProgrammatically();
-    populateSelectedBrandLogosProgrammatically();
-    populateBetTitle();
-})
+// $(function () {
+//     simpleBettingHandler('simple-betting-1');
+//     // populateImagesProgrammatically();
+//     populateSelectedBrandLogosProgrammatically();
+//     populateBetTitle();
+// })
 
 $(".numpad-btn").click(function (event) {
     const firstChild = $(event.currentTarget).children().first()
@@ -224,7 +224,7 @@ function hideKeyboard() {
 function populateBetTitle(){
     const title =  window.sessionStorage.getItem("betTitle")
     if(title){
-        console.log(title)
+        // console.log(title)
         $('#bet-title').html(title)
     }
 }
@@ -292,6 +292,10 @@ function handleNextSimpleBetting() {
 }
 
 
+function saveSelectedBrandLogos(selectedBrandLogos) {
+    window.sessionStorage.setItem("selectedBrandLogos", JSON.stringify(selectedBrandLogos))
+}
+
 function handleNextSimpleBetting42rd() {
 
     // Define an object to store the selected brand logos and their selected chips
@@ -311,9 +315,8 @@ function handleNextSimpleBetting42rd() {
 // Log the selected brand logos and their selected chips to the console
     console.log('selectedBrandLogos',selectedBrandLogos);
 
-
     console.log(JSON.stringify(selectedBrandLogos))
-    window.sessionStorage.setItem("selectedBrandLogos", JSON.stringify(selectedBrandLogos))
+    saveSelectedBrandLogos(selectedBrandLogos);
     console.log(window.location)
     console.log(document.location)
     window.open('simple-betting-2.html', '_self');

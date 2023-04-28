@@ -39,7 +39,7 @@
                                     <select onchange="simpleBettingHandler(this.value)">
                                         <option value="simple-betting-1" selected="selected">4D : Big-Small-4A</option>
                                         <option value="simple-betting-2">4D : 4A-4B-4C-4D-4E</option>
-                                        <option value="simple-betting-3">4D : 2D : 2A-2B-2C-2D-2E-2N</option>
+                                        <option value="simple-betting-3">2D : 2D : 2A-2B-2C-2D-2E-2N</option>
                                         <option value="simple-betting-4">3D : 3A-3B-3C-3D-3D-3N</option>
                                         <option value="simple-betting-5">5D : 5D</option>
                                         <option value="simple-betting-6">6D : 6D</option>
@@ -55,7 +55,42 @@
                                     <h4>Time</h4>
                                 </div>
 
-                                <div class="company_icon">
+                                <div class="company_icon_column w-100 mt-1">
+                                    <!--                                    <div class="flex-row">-->
+                                    <!--                                        <img src="../assets/img/selected_company%20(1).png">-->
+                                    <!--                                        <div class="chips">-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">12pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">3pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">3pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">3pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">3pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">3pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+                                    <!--                                            <div class="chip-close">-->
+                                    <!--                                                <span class="chip-text">3pm</span>-->
+                                    <!--                                                <span class="close-btn">&times;</span>-->
+                                    <!--                                            </div>-->
+
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+
                                     <!--                        <div class="bet_bx">-->
                                     <!--                            <img src="assets/img/brand-1.png" class="bk_1" alt="">-->
                                     <!--                            <img src="assets/img/logo_b-1.png" class="bk_2" alt="">-->
@@ -793,7 +828,8 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>2D
+                                            <li>
+                                                2D<br>(x10)
                                                 <div class="table_check">
                                                     <div class="codeplay-ck">
                                                         <label class="container-ck">
@@ -803,7 +839,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>2E
+                                            <li>2E<br>(x10)
                                                 <div class="table_check">
                                                     <div class="codeplay-ck">
                                                         <label class="container-ck">
@@ -813,13 +849,24 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>2N
-                                                <div class="table_check">
-                                                    <div class="codeplay-ck">
-                                                        <label class="container-ck">
-                                                            <input type="checkbox"">
-                                                            <span class="checkmark"></span>
-                                                        </label>
+                                            <li>Box/<br>iBox
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </li>
@@ -831,7 +878,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -840,7 +897,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -849,7 +916,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -858,7 +935,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -867,7 +954,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -876,7 +973,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -885,7 +992,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -894,7 +1011,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -903,17 +1030,25 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
-                                        <ul>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
-                                        </ul>
+
+
+
+
+
+
+
                                     </div>
                                 </div>
                                 <div class="simple-betting-4">
@@ -951,7 +1086,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>3D
+                                            <li>3D<br>(x10)
                                                 <div class="table_check">
                                                     <div class="codeplay-ck">
                                                         <label class="container-ck">
@@ -961,7 +1096,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>3E
+                                            <li>3E<br>(x10)
                                                 <div class="table_check">
                                                     <div class="codeplay-ck">
                                                         <label class="container-ck">
@@ -971,13 +1106,24 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>3N
-                                                <div class="table_check">
-                                                    <div class="codeplay-ck">
-                                                        <label class="container-ck">
-                                                            <input type="checkbox"">
-                                                            <span class="checkmark"></span>
-                                                        </label>
+                                            <li>Box/<br>iBox
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </li>
@@ -989,7 +1135,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -998,7 +1154,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1007,7 +1173,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1016,7 +1192,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1025,7 +1211,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1034,7 +1230,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1043,7 +1249,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1052,7 +1268,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1061,7 +1287,17 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
-                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li><input type="text" class="keyId" readonly></li>
@@ -1070,7 +1306,36 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul>
                                             <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li>
+                                                <div class="table_ck">
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="">--</option>
+                                                            <option value="">box</option>
+                                                            <option value="">ibox</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
 
@@ -1094,6 +1359,47 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                         </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+
 
                                     </div>
                                 </div>
@@ -1116,6 +1422,39 @@
                                             <li><input type="text" class="keyId" readonly></li>
                                             <li><input type="text" class="keyId" readonly></li>
                                         </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>v
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+                                        <ul>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                            <li><input type="text" class="keyId" readonly></li>
+                                        </ul>
+
 
                                     </div>
                                 </div>
@@ -1126,9 +1465,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
 
 
             </div>
@@ -1223,10 +1559,10 @@
 </div>
 
 
-
-
-
 <script src="../assets/js/jquery.min.js"></script>
+<!--<script src="../assets/js/jquery.min.js"></script>-->
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/4d2rd-bet/simple-betting-2.js"></script>
+
 </body>
 </html>

@@ -34,13 +34,10 @@
                                     <h4>Type</h4>
                                     <div class="select_type">
                                         <div class="select">
-                                            <select class="bug-overflow" id="url" onchange="urlHandler(this.value)">
-                                                <option value="pro-betting-1.html" selected="selected">4D : Big-Small-4A</option>
-                                                <option value="pro-betting-2.html">4D : 4A-4B-4C-4D-4E</option>
-                                                <option value="pro-betting-3.html">2D : 2A-2B-2C-2D-2E-2N</option>
-                                                <option value="pro-betting-4.html">3D : 3A-3B-3C-3D-3D-3N</option>
-                                                <option value="pro-betting-5.html">5D : 5D</option>
-                                                <option value="pro-betting-6.html">6D : 6D</option>
+                                            <select class="bug-overflow" id="url" onchange="proBettingDropdownHandler(this.value)">
+                                                <option value="pro-betting-1" selected="selected">4D</option>
+                                                <option value="pro-betting-2">2D</option>
+                                                <option value="pro-betting-5">3D</option>
                                             </select>
                                         </div>
                                     </div>
@@ -105,8 +102,84 @@
                 </div>
 
 
-                <div class="bet_number_wrap">
-                    <div class="container">
+                <div class="bet_number_wrap" id="#main-container">
+                    <div class="container" id="pro-betting-1">
+                        <div class="betting__number">
+                            <h4>Bet your number here</h4>
+                            <form id="pin-container">
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
+                            </form>
+                        </div>
+                        <div class="bet_ibox">
+                            <h4>Box / IBox</h4>
+                            <div class="select">
+                                <select>
+                                    <option selected="selected">Straight</option>
+                                    <option value="">Box</option>
+                                    <option value="">IBox</option>
+                                </select>
+                            </div>
+                            <div class="singe_bet">
+                                <div class="ibet_number">
+                                    <label>Big</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+                                <div class="ibet_number">
+                                    <label>Small</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+
+                            </div>
+                            <div class="singe_bet">
+                                <div class="ibet_number">
+                                    <label>4A</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" id="pro-betting-2">
+                        <div class="betting__number">
+                            <h4>Bet your number here</h4>
+                            <form id="pin-container">
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
+                            </form>
+                        </div>
+                        <div class="bet_ibox">
+                            <h4>Box / IBox</h4>
+                            <div class="select">
+                                <select>
+                                    <option selected="selected">Straight</option>
+                                    <option value="">Box</option>
+                                    <option value="">IBox</option>
+                                </select>
+                            </div>
+                            <div class="singe_bet">
+                                <div class="ibet_number">
+                                    <label>Big</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+                                <div class="ibet_number">
+                                    <label>Small</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+
+                            </div>
+                            <div class="singe_bet">
+                                <div class="ibet_number">
+                                    <label>4A</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" id="pro-betting-3">
                         <div class="betting__number">
                             <h4>Bet your number here</h4>
                             <form id="pin-container">
@@ -258,5 +331,6 @@
 
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/4d2rd-bet/pro-betting.js"></script>
 </body>
 </html>
