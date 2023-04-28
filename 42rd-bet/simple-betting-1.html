@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro betting</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div id="container">
+    <main >
+        <section id="main">
+            <div class="main_wrapper">
+
+                <div class="betting__title">
+                    <h2>SIMPLE betting</h2>
+                    <a onclick="goBack()"><img src="../assets/img/times.png" alt=""></a>
+                </div>
+
+                <div class="simple-betting">
+                    <div class="container">
+                        <div class="choose_d">
+                            <div class="choose_filed">
+                                <label for="">Days</label>
+                                <div class="select">
+                                    <select>
+                                        <option value="1">1 Day</option>
+                                        <option value="2">2 Day</option>
+                                        <option value="3">3 Day</option>
+                                        <option value="3">4 Day</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="choose_filed type_field">
+                                <label for="">Type</label>
+                                <div class="select">
+                                    <select>
+                                        <option value="" selected="selected">4D : Big-Small-4A</option>
+                                        <option value="">4D : 4A-4B-4C-4D-4E</option>
+                                        <option value="">2D : 2A-2B-2C-2D-2E-2N</option>
+                                        <option value="">3D : 3A-3B-3C-3D-3D-3N</option>
+                                        <option value="">5D : 5D</option>
+                                        <option value="">6D : 6D</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brand_logo_wrap">
+                            <h4>Choose Company</h4>
+                            <div class="companny_logo">
+                                <div class="flex-row">
+                                    <div class="brand_logo">
+                                        <div class="icon_box">
+                                            <img src="../assets/img/company%20(1).png" class="logo_1" alt="">
+                                            <img src="../assets/img/selected_company%20(1).png" class="logo_2" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="chips">
+                                        <div class="chip">12pm</div>
+                                        <div class="chip">3pm</div>
+                                        <div class="chip">6pm</div>
+                                        <div class="chip">9pm</div>
+                                        <div class="chip">12am</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="brand_logo">
+                                        <div class="icon_box">
+                                            <img src="../assets/img/company%20(5).png" class="logo_1" alt="">
+                                            <img src="../assets/img/selected_company%20(5).png" class="logo_2" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="chips">
+                                        <div class="chip">3pm</div>
+                                        <div class="chip">9pm</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="brand_logo">
+                                        <div class="icon_box">
+                                            <img src="../assets/img/company%20(2).png" class="logo_1" alt="">
+                                            <img src="../assets/img/selected_company%20(2).png" class="logo_2" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="chips">
+                                        <div class="chip">3pm</div>
+                                        <div class="chip">9pm</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="brand_logo">
+                                        <div class="icon_box">
+                                            <img src="../assets/img/company%20(3).png" class="logo_1" alt="">
+                                            <img src="../assets/img/selected_company%20(3).png" class="logo_2" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="chips">
+                                        <div class="chip">3pm</div>
+                                        <div class="chip">9pm</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <div class="brand_logo">
+                                        <div class="icon_box">
+                                            <img src="../assets/img/company%20(4).png" class="logo_1" alt="">
+                                            <img src="../assets/img/selected_company%20(4).png" class="logo_2" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="chips">
+                                        <div class="chip">7pm</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="next_option">
+                            <!--                <a href="simple-betting-2.html" class="common_btn">next</a>-->
+                            <button onclick="handleNextSimpleBetting42rd()" class="common_btn">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</div>
+
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+    $(function () {
+        simpleBettingHandler('simple-betting-1');
+        populateSelectedBrandLogosProgrammatically();
+        populateBetTitle();
+    })
+</script>
+</body>
+</html>

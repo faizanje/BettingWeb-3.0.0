@@ -98,7 +98,8 @@ $(document).click(function (event) {
 
 $(function () {
     simpleBettingHandler('simple-betting-1');
-    populateImagesProgrammatically();
+    // populateImagesProgrammatically();
+    populateSelectedBrandLogosProgrammatically();
     populateBetTitle();
 })
 
@@ -138,6 +139,10 @@ $(".keypad_arrow, .btn_arrow, .dismiss").click(function () {
 
 $(".icon_box").click(function () {
     $(this).toggleClass("active");
+});
+
+$(".chip").click(function () {
+    $(this).toggleClass("selected");
 });
 
 $(".bet_bx").click(function () {
@@ -230,6 +235,15 @@ function populateImagesProgrammatically() {
     })
 
 }
+function populateSelectedBrandLogosProgrammatically() {
+    const selectedBrandLogos = getSelectedBrandLogos()
+
+    for (let brand in selectedBrandLogos) {
+        const times= selectedBrandLogos[brand]
+        $(".company_icon").append(getImgElement(brand))
+    }
+
+}
 
 function simpleBettingHandler(value) {
     console.log('Changed ', value);
@@ -245,11 +259,67 @@ function handleNextSimpleBetting() {
         console.log(indexInArray, elementOfArray)
         return elementOfArray.src;
     });
+
+
+    // Define an object to store the selected brand logos and their selected chips
+    var selectedBrandLogos = {};
+
+// Get all brand logos with the 'active' class
+    $('.brand_logo .icon_box.active').each(function() {
+        var logo = $(this).find('.logo_2').attr('src');
+        var chips = $(this).parent().next('.chips').find('.chip.selected').map(function() {
+            return $(this).text();
+        }).get();
+
+        // Add the selected brand logo and its selected chips to the object
+        selectedBrandLogos[logo] = chips;
+    });
+
+// Log the selected brand logos and their selected chips to the console
+    console.log('selectedBrandLogos',selectedBrandLogos);
+
+
     console.log(JSON.stringify(imagesArray))
     window.sessionStorage.setItem("imagesArray", JSON.stringify(imagesArray))
     console.log(window.location)
     console.log(document.location)
+    // window.open('simple-betting-2.html', '_self');
+
+
+
+    // window.location.assign("/simple-betting-2.html");
+    // window.location.assign("/simple-betting-2.html");
+}
+
+
+function handleNextSimpleBetting42rd() {
+
+    // Define an object to store the selected brand logos and their selected chips
+    const selectedBrandLogos = {};
+
+// Get all brand logos with the 'active' class
+    $('.brand_logo .icon_box.active').each(function() {
+        var logo = $(this).find('.logo_2').attr('src');
+        var chips = $(this).parent().next('.chips').find('.chip.selected').map(function() {
+            return $(this).text();
+        }).get();
+
+        // Add the selected brand logo and its selected chips to the object
+        selectedBrandLogos[logo] = chips;
+    });
+
+// Log the selected brand logos and their selected chips to the console
+    console.log('selectedBrandLogos',selectedBrandLogos);
+
+
+    console.log(JSON.stringify(selectedBrandLogos))
+    window.sessionStorage.setItem("selectedBrandLogos", JSON.stringify(selectedBrandLogos))
+    console.log(window.location)
+    console.log(document.location)
     window.open('simple-betting-2.html', '_self');
+
+
+
     // window.location.assign("/simple-betting-2.html");
     // window.location.assign("/simple-betting-2.html");
 }
@@ -280,6 +350,15 @@ function getImagesArray() {
     }
     console.log('imagesArrayStr', imagesArrayStr);
     return JSON.parse(imagesArrayStr);
+    // return [];
+}
+function getSelectedBrandLogos() {
+    const selectedBrandLogos = window.sessionStorage.getItem("selectedBrandLogos")
+    if (!selectedBrandLogos) {
+        return {};
+    }
+    console.log('selectedBrandLogos', selectedBrandLogos);
+    return JSON.parse(selectedBrandLogos);
     // return [];
 }
 

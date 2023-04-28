@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro betting</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 
                 <div class="betting__title">
                     <h2>SIMPLE betting</h2>
-                    <a onclick="goBack()"><img src="assets/img/times.png" alt=""></a>
+                    <a onclick="goBack()"><img src="../assets/img/times.png" alt=""></a>
                 </div>
 
                 <div class="simple-betting">
@@ -49,68 +49,75 @@
                         </div>
                         <div class="brand_logo_wrap">
                             <h4>Choose Company</h4>
-                            <div class="companny_logo">
+                            <div class="companny_logo_grid">
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-1.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-1.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-1.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-1.png" class="logo_2" alt="">
                                     </div>
                                     <p>MAGNUM</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-2.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-2.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-2.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-2.png" class="logo_2" alt="">
                                     </div>
                                     <p>PMP</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-3.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-3.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-3.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-3.png" class="logo_2" alt="">
                                     </div>
                                     <p>TOTO</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-4.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-4.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-4.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-4.png" class="logo_2" alt="">
                                     </div>
                                     <p>SINGAPORE</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-5.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-5.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-5.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-5.png" class="logo_2" alt="">
                                     </div>
                                     <p>SARAWAK</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-6.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-6.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-6.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-6.png" class="logo_2" alt="">
                                     </div>
                                     <p>SABAH</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-7.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-7.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-7.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-7.png" class="logo_2" alt="">
                                     </div>
                                     <p>SANDAKAN</p>
                                 </div>
                                 <div class="brand_logo">
                                     <div class="icon_box">
-                                        <img src="assets/img/brand-8.png" class="logo_1" alt="">
-                                        <img src="assets/img/logo_b-8.png" class="logo_2" alt="">
+                                        <img src="../assets/img/brand-8.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-8.png" class="logo_2" alt="">
                                     </div>
                                     <p>GD LOTTO</p>
+                                </div>
+                                <div class="brand_logo">
+                                    <div class="icon_box">
+                                        <img src="../assets/img/brand-9.png" class="logo_1" alt="">
+                                        <img src="../assets/img/logo_b-9.png" class="logo_2" alt="">
+                                    </div>
+                                    <p>NINELOTTO</p>
                                 </div>
                             </div>
                         </div>
                         <div class="next_option">
                             <!--                <a href="simple-betting-2.html" class="common_btn">next</a>-->
-                            <button onclick="handleNextSimpleBetting()" class="common_btn">Next</button>
+                            <button onclick="handleNextSimpleBetting42rd()" class="common_btn">Next</button>
                         </div>
                     </div>
                 </div>
@@ -124,7 +131,14 @@
 </div>
 
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+    $(function () {
+        simpleBettingHandler('simple-betting-1');
+        populateSelectedBrandLogosProgrammatically();
+        populateBetTitle();
+    })
+</script>
 </body>
 </html>
