@@ -14,6 +14,10 @@ $(function () {
 //     $(this).toggleClass("selected");
 // });
 
+
+$('.chip').click(function () {
+    $(this).parent().parent().find('.icon_box').addClass('active')
+})
 function selectBrandsOnStartup() {
     console.log('selectBrandsOnStartup')
     const brands = getSelectedBrandLogos()
@@ -29,8 +33,8 @@ function handleNextSimpleBetting4d2rd() {
 
     // Get all brand logos with the 'active' class
     $('.brand_logo .icon_box.active').each(function() {
-        var logo = $(this).find('.logo_2').attr('src');
-        var chips = $(this).parent().next('.chips').find('.chip.selected').map(function() {
+        const logo = $(this).find('.logo_2').attr('src');
+        const chips = $(this).parent().next('.chips').find('.chip.selected').map(function () {
             return $(this).text();
         }).get();
 

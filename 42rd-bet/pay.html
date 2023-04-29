@@ -12,7 +12,7 @@
 <div id="container">
     <main class="bg_image">
         <section id="main">
-            <div class="main_wrapper bg_image">
+            <div class="main_wrapper">
 
                 <div class="betting__title">
                     <h2>Pay</h2>
@@ -37,16 +37,28 @@
                                     <h3>123</h3>
                                 </div>
 
-                                <img class="heart" src="../assets/img/heart%20(2).png">
+<!--                                <img class="heart" src="../assets/img/heart%20(2).png">-->
                                 <div class="sets_price">
                                     <p>Total Bet</p>
                                     <h2>36.00</h2>
                                 </div>
                             </div>
-                            <div class="sets_logo">
-                                <img src="../assets/img/brand-1.png" alt="">
-                                <img src="../assets/img/brand-2.png" alt="">
-                                <img src="../assets/img/brand-3.png" alt="">
+                            <div class="flex-column">
+                                <div class="flex-row">
+                                    <img src="../assets/img/selected_company%20(1).png" class="small-img">
+                                    <div class="chips">
+                                        <div class="chip-small-black">12pm</div>
+                                        <div class="chip-small-black">3pm</div>
+                                        <div class="chip-small-black">6pm</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row">
+                                    <img src="../assets/img/selected_company%20(2).png" class="small-img">
+                                    <div class="chips">
+                                        <div class="chip-small-black">3pm</div>
+                                        <div class="chip-small-black">6pm</div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="sets_info">
                                 <button>2 days</button>
@@ -58,36 +70,8 @@
                         </div>
                         <span class="set_x">x</span>
                     </div>
-                    <div class="sets_wrapper">
-                        <span class="set_number">2</span>
-                        <div class="sets_card">
-                            <div class="sets_top">
-                                <div class="sets_bet">
-                                    <h3>3333</h3>
-                                </div>
-                                <img class="heart" src="../assets/img/heart%20(2).png">
-                                <div class="sets_price">
-                                    <p>Total Bet</p>
-                                    <h2>27.00</h2>
-                                </div>
-                            </div>
-                            <div class="sets_logo">
-                                <img src="../assets/img/brand-1.png" alt="">
-                                <img src="../assets/img/brand-2.png" alt="">
-                                <img src="../assets/img/brand-3.png" alt="">
-                            </div>
-                            <div class="sets_info">
-                                <button>2 days</button>
-                                <button>iBOX</button>
-                            </div>
-                            <div class="sets_info d_info">
-                                <button>B:1 S:1 4A:1 4B:1 4C:1 4D:1 4E:1</button>
-                            </div>
-                        </div>
-                        <span class="set_x">x</span>
-                    </div>
                     <div class="sets_wrapper sets_add">
-                        <span class="set_number">3</span>
+                        <span class="set_number">2</span>
                         <div class="sets_number_add">
                             <input type="text" placeholder="Add number" class="keyId">
                         </div>
@@ -99,15 +83,13 @@
         </section>
     </main>
     <footer>
-
-
         <div class="cost_wrapper">
             <div class="total_cost">
                 <h4>Total Cost :</h4>
                 <h2>0.00</h2>
             </div>
             <div class="confirm_btn">
-                <a href="order.html" class="common_btn btn_black">Comfirm Bet</a>
+                <a href="order.html" class="common_btn btn_black">Confirm Bet</a>
                 <div class="btn_fvrt">
                     <a href="favorite-bill.html" class="fvrt_btn"><img src="../assets/img/heart.png" alt=""></a>
                 </div>
@@ -202,5 +184,6 @@
 
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/4d2rd-bet/pay.js"></script>
 </body>
 </html>

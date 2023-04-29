@@ -141,6 +141,9 @@ $(".icon_box").click(function () {
     $(this).toggleClass("active");
 });
 
+
+
+
 $(".chip").click(function () {
     $(this).toggleClass("selected");
 });
@@ -378,10 +381,12 @@ function getImgElement(image) {
 
 function insertPin(firstChild) {
     let focusedPinIndex = -1;
-    const array = $("#pin-container").children()
+    console.log(window.location.pathname)
+    const array = $(".pin-container").children()
+    console.log('pin-container length', array.length)
     for (let i = 0; i < array.length; i++) {
-        console.log(array[i])
-        console.log(array[i].value)
+        // console.log(array[i])
+        // console.log(array[i].value)
         if (array[i].value.length === 0) {
             focusedPinIndex = i;
             break;
@@ -397,7 +402,7 @@ function insertPin(firstChild) {
 
 function removePin() {
     let focusedPinIndex = -1;
-    const array = $("#pin-container").children()
+    const array = $(".pin-container").children()
     for (let i = (array.length - 1); i >= 0; i--) {
         console.log(array[i])
         if (array[i].value.length >= 1) {
