@@ -239,13 +239,13 @@ function populateImagesProgrammatically() {
 
 }
 function populateSelectedBrandLogosProgrammatically() {
+    console.log('populateSelectedBrandLogosProgrammatically')
     const selectedBrandLogos = getSelectedBrandLogos()
-
     for (let brand in selectedBrandLogos) {
+        console.log(brand)
         const times= selectedBrandLogos[brand]
         $(".company_icon").append(getImgElement(brand))
     }
-
 }
 
 function simpleBettingHandler(value) {
@@ -376,7 +376,7 @@ function getBetBxDiv(image1, image2) {
 }
 
 function getImgElement(image) {
-    return `<img src="${image}" className="bk_2" alt="">`;
+    return `<img src="${image}" class="logo">`;
 }
 
 function insertPin(firstChild) {

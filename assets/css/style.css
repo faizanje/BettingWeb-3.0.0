@@ -623,6 +623,7 @@ small{
 .chip-text {
   display: inline-block;
   margin-right: 8px;
+  font-size: 12px;
 }
 .company_icon_column img {
   width: 42px;
