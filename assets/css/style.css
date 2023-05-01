@@ -76,8 +76,24 @@ h4,
 h5,
 h6 {
   margin: 0 0 15px;
-  font-family: 'Avenir-roman';
+  font-family: 'Avenir-roman', serif;
   font-weight: normal;
+}
+
+.arrow-down {
+  fill: black;
+  display: inline-block;
+  /*width: 0;*/
+  /*height: 0;*/
+  /*border-style: solid;*/
+  /*border-width: 0 5px 5px 5px;*/
+  /*border-color: transparent transparent #000 transparent;*/
+  /*margin: 0 5px 0 -2.5px;*/
+  margin-left: 4px;
+  vertical-align: middle;
+  height: 12px;
+  width: 16px;
+  margin-top: -4px;
 }
 
 a:hover {
@@ -406,6 +422,28 @@ select::-ms-expand {
   line-height: 35px;
   text-align: center;
 }
+
+.arrow-text {
+  position: relative;
+  display: inline-block;
+  padding-right: 25px;
+  line-height: 25px;
+}
+
+/*.arrow-text::after {*/
+/*  content: '\25BC';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  width: 25px;*/
+/*  height: 100%;*/
+/*  color: #000;*/
+/*  text-align: center;*/
+/*  pointer-events: none;*/
+/*  transition: .25s all ease;*/
+/*  !*background-color: #fff;*!*/
+/*}*/
+
 /* Transition */
 .select:hover::after {
   color: #000;
@@ -452,10 +490,25 @@ small{
   margin: 0 !important;
 }
 
+.time-wrapper {
+  cursor: pointer;
+  text-align: right;
+  flex: 2;
+  /*margin-top: 15px; !* adjust as needed *!*/
+}
+
+.companies-row h4 {
+  margin: 0;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.flex-center {
+  justify-content: center;
 }
 
 .logo-image {
@@ -1808,4 +1861,9 @@ a {
   background-color: white;
   height: 1px;
   margin: 20px 0;
+}
+
+.black{
+  fill: black;
+  color: black;
 }

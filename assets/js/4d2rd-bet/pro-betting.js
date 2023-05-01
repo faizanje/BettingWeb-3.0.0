@@ -127,4 +127,6 @@ function on4d2rdPayClicked() {
     }
 }
 
-
+$('.time-wrapper').click(function () {
+    $('.dialog-container').addClass('active');
+})
