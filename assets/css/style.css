@@ -594,6 +594,7 @@ small{
 .chip-close {
   margin: 4px;
   display: inline-block;
+  text-align: center;
   font-weight: bold;
   border-radius: 16px;
   background-color: #e2ac0c;
@@ -612,12 +613,25 @@ small{
 }
 
 .chip-close .close-btn {
+  margin: 6px 6px 0 0;
+  /*margin-right: 10px;*/
+  /*margin-top: 6px;*/
   color: black;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chip-text {
@@ -1716,7 +1730,8 @@ img.btn_arrow {
   height: auto;
   border-radius: 50px;
   border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.8);
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+  background-color: black;
   color: white;
   z-index: 999;
   transition: .3s;
@@ -1779,4 +1794,18 @@ img.btn_arrow {
   font-size: 18px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.text-with-image img{
+  float: right;
+}
+
+.divider {
+  background-color: white;
+  height: 1px;
+  margin: 20px 0;
 }

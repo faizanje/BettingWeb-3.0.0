@@ -16,7 +16,9 @@
         <section id="main">
             <div class="main_wrapper bg_image with_black" style="padding:25px 0">
 
-                <div class="betting__title">
+
+                <div class="betting__title fast_bet_title">
+                    <img src="../assets/img/i.png" alt="">
                     <h2>Pro betting</h2>
                     <a onclick="goBack()"><img src="../assets/img/times.png" alt=""></a>
                 </div>
@@ -32,12 +34,9 @@
                                     <div class="select_type">
                                         <div class="select">
                                             <select class="bug-overflow" id="url" onchange="urlHandler(this.value)">
-                                                <option value="pro-betting-1.html">4D : Big-Small-4A</option>
-                                                <option value="pro-betting-2.html" selected="selected">4D : 4A-4B-4C-4D-4E</option>
-                                                <option value="pro-betting-3.html">4D : 2D : 2A-2B-2C-2D-2E-2N</option>
-                                                <option value="pro-betting-4.html">3D : 3A-3B-3C-3D-3D-3N</option>
-                                                <option value="pro-betting-5.html">5D : 5D</option>
-                                                <option value="pro-betting-6.html">6D : 6D</option>
+                                                <option value="pro-betting-1.html">4D</option>
+                                                <option value="pro-betting-2.html" selected>2D</option>
+                                                <option value="pro-betting-3.html" >3D</option>
                                             </select>
                                         </div>
                                     </div>
@@ -98,50 +97,42 @@
                 </div>
 
 
-                <div class="bet_number_wrap">
-                    <div class="container">
+                <div class="bet_number_wrap" id="main-container">
+                    <div class="container" id="pro-betting-1">
                         <div class="betting__number">
                             <h4>Bet your number here</h4>
                             <form class="pin-container">
-                                <input class="pin keyId" readonly maxlength="1" />
-                                <input class="pin keyId" readonly maxlength="1" />
-                                <input class="pin keyId" readonly maxlength="1" />
-                                <input class="pin keyId" readonly maxlength="1" />
+                                <input class="pin keyId" readonly maxlength="1"/>
+                                <input class="pin keyId" readonly maxlength="1"/>
                             </form>
                         </div>
+                        <div class="divider"></div>
                         <div class="bet_ibox">
-                            <h4>Box / IBox</h4>
-                            <div class="select">
-                                <select>
-                                    <option value="" selected="selected">Straight</option>
-                                    <option value="">Box</option>
-                                    <option value="">IBox</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="bet_ibox  item_4">
-
                             <div class="singe_bet">
                                 <div class="ibet_number">
-                                    <label for="">4A</label>
+                                    <label>2A</label>
                                     <input type="text" name="" class="keyId" readonly>
                                 </div>
                                 <div class="ibet_number">
-                                    <label for="">4B</label>
+                                    <label>2B</label>
                                     <input type="text" name="" class="keyId" readonly>
                                 </div>
                                 <div class="ibet_number">
-                                    <label for="">4C</label>
+                                    <label>2C</label>
                                     <input type="text" name="" class="keyId" readonly>
                                 </div>
                             </div>
                             <div class="singe_bet">
                                 <div class="ibet_number">
-                                    <label for="">4D</label>
+                                    <label>2D</label>
                                     <input type="text" name="" class="keyId" readonly>
                                 </div>
                                 <div class="ibet_number">
-                                    <label for="">4E</label>
+                                    <label>2E</label>
+                                    <input type="text" name="" class="keyId" readonly>
+                                </div>
+                                <div class="ibet_number">
+                                    <label>2N</label>
                                     <input type="text" name="" class="keyId" readonly>
                                 </div>
                             </div>
@@ -172,74 +163,82 @@
                     <img src="../assets/img/arrow.png" alt="">
                 </div>
             </div>
-            <div class="keypad_button">
-                <ul>
-                    <li class="numpad-btn">
-                        <span class="number">1</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">2</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">3</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="backspace">
-                        <img class="btn_icon" src="../assets/img/backspace.png" alt="">
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">4</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">5</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">6</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="btn_txt">NEXT</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">7</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">8</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">9</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="hash_txt btn_txt">0-9</span>
-                        <!--                        <img class="btn_icon" src="../assets/img/plush.png" alt="">-->
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number"><i class="fullstop">.</i></span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">0</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="number">#</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                    <li class="numpad-btn">
-                        <span class="hash_txt btn_txt">BET</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
-                    </li>
-                </ul>
+            <div class="keypad_box">
+                <div class="keypad_top">
+                    <h4>T : 00.00</h4>
+                    <div class="keypad_arrow center-abs">
+                        <img src="../assets/img/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="keypad_button">
+                    <ul>
+                        <li class="numpad-btn">
+                            <span class="number">1</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">2</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">3</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="backspace">
+                            <img class="btn_icon" src="../assets/img/backspace.png" alt="">
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">4</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">5</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">6</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="btn_txt">NEXT</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">7</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">8</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">9</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <!--                        <img class="btn_icon" src="../assets/img/plush.png" alt="">-->
+                            <span class="hash_txt btn_txt">ADD</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number"><i class="fullstop">.</i></span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">0</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="number">0-9</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                        <li class="numpad-btn">
+                            <span class="hash_txt btn_txt">BET</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
