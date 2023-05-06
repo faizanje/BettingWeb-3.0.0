@@ -34,10 +34,12 @@ $('.bet_bx-2').click(function () {
 $(".chip").on("click", function () {
     // get selected time
 
+    // $(this).parent().parent().find('.icon_box-small').addClass('active')
     console.log('pre data',selectedCompanies)
     let selectedTime = $(this).text();
     // get selected company's selectedSrc
     let selectedSrc = $(this).parent().siblings(".brand_logo").find(".logo_2").attr("src");
+    $("img[src='" + selectedSrc + "']").parent().addClass("active");
 
     //check if chip is selected
 
@@ -99,7 +101,6 @@ $(".icon_box-small").click(function () {
         delete selectedCompanies[selectedSrc]
         // Deselect all chips for selectedSrc
         $("img[src='" + selectedSrc + "']").parent().parent().next('.chips').children().removeClass('selected');
-
     }
     // if($(this).hasClass('active')){
     //     selectedCompanies[selectedSrc] = []
@@ -109,6 +110,32 @@ $(".icon_box-small").click(function () {
     // console.log('selectedCompanies',selectedCompanies)
 });
 
+function addClicked(){
+    const pin = fetchEnteredPin()
+    saveEnteredPin(pin)
+    saveSelectedBrandLogos(getSelectedCompanies())
+    window.open('pay.html', '_self');
+}
+
+function getSelectedCompanies(){
+    let selectedCompanies = {}; // Initialize an empty object to store the selected companies and times
+
+// Loop through each selected company
+    $('.icon_box-small.active').each(function() {
+        let companySrc = $(this).find('.logo_2').attr('src'); // Get the source of the selected company
+        let times = []; // Initialize an empty array to store the times for this company
+
+        // Loop through each chip for this company and add its text content to the times array
+        $(this).closest('.flex-row').find('.chip.selected').each(function() {
+            times.push($(this).text());
+        });
+
+        selectedCompanies[companySrc] = times; // Add the company and times to the selectedCompanies object
+    });
+
+    console.log(selectedCompanies); // Outputs the object containing selected companies and their times
+    return selectedCompanies;
+}
 
 $('#reset-btn').click(function () {
     $('.icon_box-small').removeClass('active')
@@ -119,9 +146,8 @@ $('#reset-btn').click(function () {
 
 function on4d2rdPayClicked() {
     let isCompanySelected = Object.keys(selectedCompanies).length !== 0;
-
     if (isCompanySelected) {
-        window.open('pay.html', '_self');
+        addClicked()
     } else {
         $(".modal").addClass('active')
     }

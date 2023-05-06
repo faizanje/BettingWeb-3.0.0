@@ -41,7 +41,7 @@ $('.clickable-overunder-item').click(function () {
 })
 
 function showModalDialog(title) {
-    window.sessionStorage.setItem("betTitle",title)
+    window.sessionStorage.setItem("betTitle", title)
     $('.modal-title').html(title)
     console.log($('.modal-title').html())
     console.log($('.handi-txt').html(title + ' :0.25 @ 0 - 0'))
@@ -142,8 +142,6 @@ $(".icon_box").click(function () {
 });
 
 
-
-
 $(".chip").click(function () {
     $(this).toggleClass("selected");
 });
@@ -224,13 +222,14 @@ function hideKeyboard() {
 }
 
 
-function populateBetTitle(){
-    const title =  window.sessionStorage.getItem("betTitle")
-    if(title){
+function populateBetTitle() {
+    const title = window.sessionStorage.getItem("betTitle")
+    if (title) {
         // console.log(title)
         $('#bet-title').html(title)
     }
 }
+
 function populateImagesProgrammatically() {
     const arr = getImagesArray()
     arr.forEach(function (image) {
@@ -238,12 +237,13 @@ function populateImagesProgrammatically() {
     })
 
 }
+
 function populateSelectedBrandLogosProgrammatically() {
     console.log('populateSelectedBrandLogosProgrammatically')
     const selectedBrandLogos = getSelectedBrandLogos()
     for (let brand in selectedBrandLogos) {
         console.log(brand)
-        const times= selectedBrandLogos[brand]
+        const times = selectedBrandLogos[brand]
         $(".company_icon").append(getImgElement(brand))
     }
 }
@@ -268,9 +268,9 @@ function handleNextSimpleBetting() {
     var selectedBrandLogos = {};
 
 // Get all brand logos with the 'active' class
-    $('.brand_logo .icon_box.active').each(function() {
+    $('.brand_logo .icon_box.active').each(function () {
         var logo = $(this).find('.logo_2').attr('src');
-        var chips = $(this).parent().next('.chips').find('.chip.selected').map(function() {
+        var chips = $(this).parent().next('.chips').find('.chip.selected').map(function () {
             return $(this).text();
         }).get();
 
@@ -279,7 +279,7 @@ function handleNextSimpleBetting() {
     });
 
 // Log the selected brand logos and their selected chips to the console
-    console.log('selectedBrandLogos',selectedBrandLogos);
+    console.log('selectedBrandLogos', selectedBrandLogos);
 
 
     console.log(JSON.stringify(imagesArray))
@@ -287,7 +287,6 @@ function handleNextSimpleBetting() {
     console.log(window.location)
     console.log(document.location)
     // window.open('simple-betting-2.html', '_self');
-
 
 
     // window.location.assign("/simple-betting-2.html");
@@ -328,6 +327,7 @@ function getImagesArray() {
     return JSON.parse(imagesArrayStr);
     // return [];
 }
+
 function getSelectedBrandLogos() {
     const selectedBrandLogos = window.sessionStorage.getItem("selectedBrandLogos")
     if (!selectedBrandLogos) {
@@ -335,6 +335,26 @@ function getSelectedBrandLogos() {
     }
     console.log('selectedBrandLogos', selectedBrandLogos);
     return JSON.parse(selectedBrandLogos);
+    // return [];
+}
+
+function fetchEnteredPin() {
+    let pin = '';
+    $('.pin').each(function () {
+        pin += $(this).val();
+    });
+    return pin
+    console.log('pin', pin); // Outputs the entered PIN code
+}
+
+function getEnteredPin() {
+    const pin = window.sessionStorage.getItem("enteredPin")
+    return pin;
+    // return [];
+}
+
+function saveEnteredPin(pin) {
+    window.sessionStorage.setItem("enteredPin", pin)
     // return [];
 }
 

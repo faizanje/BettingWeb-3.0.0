@@ -525,6 +525,19 @@ small{
   /*justify-content: space-between;*/
 }
 
+
+.button-bar{
+  background: white;
+  color: black;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.btn{
+  cursor: pointer;
+
+}
+
 .chip {
   margin: 4px;
   padding: 8px;
@@ -820,7 +833,7 @@ small{
 .let_logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 
 .companies-row {

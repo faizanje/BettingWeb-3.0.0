@@ -18,6 +18,18 @@ $(function () {
 $('.chip').click(function () {
     $(this).parent().parent().find('.icon_box').addClass('active')
 })
+
+$(".icon_box").click(function () {
+    // $(this).toggleClass("active");
+    const selectedSrc = $(this).find(".logo_2").attr("src");
+    // $("img[src='" + selectedSrc + "']").parent().toggleClass("active");
+    const isActive = $(this).hasClass('active')
+    console.log('isActive',isActive)
+    if(!isActive){
+        $("img[src='" + selectedSrc + "']").parent().parent().next('.chips').children().removeClass('selected');
+    }
+})
+
 function selectBrandsOnStartup() {
     console.log('selectBrandsOnStartup')
     const brands = getSelectedBrandLogos()
