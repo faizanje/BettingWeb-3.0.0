@@ -130,6 +130,7 @@ $(".backspace").click(function (event) {
 })
 
 $(".keyId").click(function (event) {
+    console.log('.keyId clicked')
     onKeyClicked(event.target);
 });
 
