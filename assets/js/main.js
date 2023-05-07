@@ -24,6 +24,8 @@ var lastScrolledPos;
             // $container.scrollTop(top + height - containerHeight + paddingPx);
         }
     };
+
+    // showKeyboard()
 })(jQuery);
 
 $('#bell').click(function () {
