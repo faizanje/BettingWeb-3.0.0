@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro betting</title>
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"-->
-<!--          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
-<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"-->
-<!--            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"-->
-<!--            crossorigin="anonymous"></script>-->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"-->
+    <!--          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"-->
+    <!--            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <!--    <link rel="stylesheet" href="../assets/css/style.css">-->
+    <!-- Just for testing the keyboard -->
+    <link rel="stylesheet" href="../assets/css/style2.css">
 </head>
 <body>
 
 
 <div id="container">
-    <main >
+    <main>
         <section id="main">
             <div class="main_wrapper bg_image with_black" style="padding:25px 0">
 
@@ -28,7 +30,7 @@
                 </div>
 
                 <div class="pro_content">
-                    <div class="container" style="padding: 0 0px;">
+                    <div class="container" style="padding: 0 0;">
                         <div class="pro_betting_info">
                             <img src="../assets/img/bg-3.png" class="bg_3" alt="">
                             <div class="betting__type">
@@ -37,14 +39,14 @@
                                     <div class="select_type">
                                         <div class="select">
                                             <select class="bug-overflow" id="url" onchange="urlHandler(this.value)">
-<!--                                                <option value="pro-betting-1.html" selected="selected">4D : Big-Small-4A</option>-->
+                                                <!--                                                <option value="pro-betting-1.html" selected="selected">4D : Big-Small-4A</option>-->
                                                 <option value="pro-betting-1.html" selected>4D</option>
                                                 <option value="pro-betting-2.html">2D</option>
-                                                <option value="pro-betting-3.html" >3D</option>
-                                                <option value="pro-betting-4.html" >5D</option>
-                                                <option value="pro-betting-5.html" >6D</option>
-<!--                                                <option value="pro-betting-5.html">5D : 5D</option>-->
-<!--                                                <option value="pro-betting-6.html">6D : 6D</option>-->
+                                                <option value="pro-betting-3.html">3D</option>
+                                                <option value="pro-betting-4.html">5D</option>
+                                                <option value="pro-betting-5.html">6D</option>
+                                                <!--                                                <option value="pro-betting-5.html">5D : 5D</option>-->
+                                                <!--                                                <option value="pro-betting-6.html">6D : 6D</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -52,12 +54,12 @@
                                 <div class="bet__day">
                                     <h4>Day</h4>
                                     <div class="select_type">
-                                        <div class="select">
+                                        <div class="select" id="days">
                                             <select>
-                                                <option value="" selected="selected">1 day</option>
-                                                <option value="">2 day</option>
-                                                <option value="">3 day</option>
-                                                <option value="">4 day</option>
+                                                <option value="1 day" selected="selected">1 day</option>
+                                                <option value="2 day">2 day</option>
+                                                <option value="3 day">3 day</option>
+                                                <option value="4 day">4 day</option>
                                             </select>
                                         </div>
                                     </div>
@@ -123,7 +125,7 @@
                         <div class="divider"></div>
                         <div class="bet_ibox">
                             <h4>Box / IBox</h4>
-                            <div class="select">
+                            <div class="select" id="box">
                                 <select>
                                     <option selected="selected">Straight</option>
                                     <option value="">Box</option>
@@ -162,52 +164,52 @@
                                 </div>
                                 <div class="ibet_number">
                                     <label>4E</label>
-                                    <input type="text" name="" class="keyId" readonly>
+                                    <input id="lastInput" type="text" name="" class="keyId" readonly>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-<!--                <div class="bet_number_wrap">-->
-<!--                    <div class="container">-->
-<!--                        <div class="betting__number">-->
-<!--                            <h4>Bet your number here</h4>-->
-<!--                            <form class="pin-container">-->
-<!--                                <input class="pin keyId" readonly maxlength="1"/>-->
-<!--                                <input class="pin keyId" readonly maxlength="1"/>-->
-<!--                                <input class="pin keyId" readonly maxlength="1"/>-->
-<!--                                <input class="pin keyId" readonly maxlength="1"/>-->
-<!--                            </form>-->
-<!--                        </div>-->
-<!--                        <div class="bet_ibox">-->
-<!--                            <h4>Box / IBox</h4>-->
-<!--                            <div class="select">-->
-<!--                                <select>-->
-<!--                                    <option selected="selected">Straight</option>-->
-<!--                                    <option value="">Box</option>-->
-<!--                                    <option value="">IBox</option>-->
-<!--                                </select>-->
-<!--                            </div>-->
-<!--                            <div class="singe_bet">-->
-<!--                                <div class="ibet_number">-->
-<!--                                    <label>Big</label>-->
-<!--                                    <input type="text" name="" class="keyId" readonly>-->
-<!--                                </div>-->
-<!--                                <div class="ibet_number">-->
-<!--                                    <label>Small</label>-->
-<!--                                    <input type="text" name="" class="keyId" readonly>-->
-<!--                                </div>-->
+                <!--                <div class="bet_number_wrap">-->
+                <!--                    <div class="container">-->
+                <!--                        <div class="betting__number">-->
+                <!--                            <h4>Bet your number here</h4>-->
+                <!--                            <form class="pin-container">-->
+                <!--                                <input class="pin keyId" readonly maxlength="1"/>-->
+                <!--                                <input class="pin keyId" readonly maxlength="1"/>-->
+                <!--                                <input class="pin keyId" readonly maxlength="1"/>-->
+                <!--                                <input class="pin keyId" readonly maxlength="1"/>-->
+                <!--                            </form>-->
+                <!--                        </div>-->
+                <!--                        <div class="bet_ibox">-->
+                <!--                            <h4>Box / IBox</h4>-->
+                <!--                            <div class="select">-->
+                <!--                                <select>-->
+                <!--                                    <option selected="selected">Straight</option>-->
+                <!--                                    <option value="">Box</option>-->
+                <!--                                    <option value="">IBox</option>-->
+                <!--                                </select>-->
+                <!--                            </div>-->
+                <!--                            <div class="singe_bet">-->
+                <!--                                <div class="ibet_number">-->
+                <!--                                    <label>Big</label>-->
+                <!--                                    <input type="text" name="" class="keyId" readonly>-->
+                <!--                                </div>-->
+                <!--                                <div class="ibet_number">-->
+                <!--                                    <label>Small</label>-->
+                <!--                                    <input type="text" name="" class="keyId" readonly>-->
+                <!--                                </div>-->
 
-<!--                            </div>-->
-<!--                            <div class="singe_bet">-->
-<!--                                <div class="ibet_number">-->
-<!--                                    <label>4A</label>-->
-<!--                                    <input type="text" name="" class="keyId" readonly>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                            </div>-->
+                <!--                            <div class="singe_bet">-->
+                <!--                                <div class="ibet_number">-->
+                <!--                                    <label>4A</label>-->
+                <!--                                    <input type="text" name="" class="keyId" readonly>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
 
 
             </div>
@@ -221,11 +223,11 @@
             </div>
             <img class="heart mr-1" src="../assets/img/heart%20(2).png">
             <div class="confirm_btn">
-                <a href="" class="common_btn btn_black">Add Number</a>
+                <a onclick="addClicked()" class="common_btn btn_black">Add Number</a>
                 <button onclick="onPayClicked()" class="common_btn btn_white">PAY</button>
             </div>
         </div>
-        <div class="keypad_box">
+        <div class="keypad_box show_keypad_box">
             <div class="keypad_top">
                 <h4>T : 00.00</h4>
                 <div class="keypad_arrow center-abs">
@@ -279,9 +281,11 @@
                         <img class="button_bg" src="../assets/img/button_bg.png" alt="">
                     </li>
                     <li class="numpad-btn">
+                        <a onclick="addClicked()">
+                            <span class="hash_txt btn_txt">ADD</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </a>
                         <!--                        <img class="btn_icon" src="../assets/img/plush.png" alt="">-->
-                        <span class="hash_txt btn_txt">ADD</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
                     </li>
                     <li class="numpad-btn">
                         <span class="number"><i class="fullstop">.</i></span>
@@ -296,8 +300,10 @@
                         <img class="button_bg" src="../assets/img/button_bg.png" alt="">
                     </li>
                     <li class="numpad-btn">
-                        <span class="hash_txt btn_txt">BET</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        <a onclick="onPayClicked()">
+                            <span class="hash_txt btn_txt">BET</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -319,8 +325,8 @@
 </div>
 
 
-
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/4d-bet/pro-betting.js"></script>
 </body>
 </html>

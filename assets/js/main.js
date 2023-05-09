@@ -25,6 +25,7 @@ var lastScrolledPos;
         }
     };
 
+    console.log('Initialized')
     // showKeyboard()
 })(jQuery);
 
@@ -183,14 +184,39 @@ function showAnimate(id) {
     });
 }
 
+function getCurrentFileName() {
+    var url = window.location.pathname;
+    const filename = url.substring(url.lastIndexOf('/') + 1);
+    return filename;
+}
+
 function showKeyboard() {
     console.log('Showing keyboard')
 
     $(".cost_wrapper").hide()
+    // $(".keypad_box").show()
 
+    // console.log($('.keypad_box').height())
     showAnimate(".keypad_box");
+    // $('#main').css('padding-bottom', $('.keypad_box').height() + 'px');
 
-    $('#main').scrollToSimple($(currentFocusedInput));
+    const filename = getCurrentFileName();
+    const proBetting1 = 'pro-betting-1.html';
+    if(filename === proBetting1){
+        // Scroll to last input so that the whole screen is shown
+        const lastInput = $("#lastInput")
+        $('#main').scrollToSimple(lastInput);
+    }else{
+        console.log(filename)
+        $('#main').scrollToSimple($(currentFocusedInput));
+    }
+
+    //
+    // const isVisible = $('.betting__title').is(':visible')
+    // console.log('IsTitleVisible',isVisible)
+
+    // $("#main").animate({ scrollTop: $(".betting__title").offset().top + $(".betting__title").outerHeight() + 30 }, "fast");
+
 }
 
 function hideAnimate(id, callback) {
@@ -221,6 +247,9 @@ function hideKeyboard() {
     hideAnimate(".keypad_box", () => {
         $(".cost_wrapper").show()
     });
+
+    $('main').css('padding-bottom', '');
+
 
 }
 
@@ -409,7 +438,7 @@ function removePin() {
     }
 }
 
-function onPayClicked() {
+function is4dCompanySelected() {
     let isCompanySelected = false;
     const activeChildren = $('.let_logo').first().find('.bet_bx').filter(function () {
         console.log($(this).hasClass('active'))
@@ -418,6 +447,23 @@ function onPayClicked() {
     console.log(activeChildren.length)
     isCompanySelected = activeChildren.length !== 0;
     console.log('isCompanySelected', isCompanySelected)
+    return isCompanySelected;
+}
+
+function is4dCompanyAndTimeSelected() {
+    let isCompanySelected = false;
+    const activeChildren = $('.let_logo').first().find('.bet_bx').filter(function () {
+        console.log($(this).hasClass('active'))
+        return $(this).hasClass('active')
+    });
+    console.log(activeChildren.length)
+    isCompanySelected = activeChildren.length !== 0;
+    console.log('isCompanySelected', isCompanySelected)
+    return isCompanySelected;
+}
+
+function onPayClicked() {
+    let isCompanySelected = is4dCompanySelected();
     if (isCompanySelected) {
         window.open('pay.html', '_self');
     } else {
@@ -431,4 +477,30 @@ function urlHandler(value) {
 
 function goBack() {
     history.back();
+}
+
+function save4dDataArray(_4dDataArray){
+    window.sessionStorage.setItem('4dDataArray', JSON.stringify(_4dDataArray))
+}
+
+function get4dDataArray(){
+    const _4dDataArray = window.sessionStorage.getItem('4dDataArray')
+    if (!_4dDataArray) {
+        return [];
+    }
+    console.log('_4dDataArray', _4dDataArray);
+    return JSON.parse(_4dDataArray);
+}
+
+function save4d2DataArray(_4d2DataArray){
+    window.sessionStorage.setItem('4d2DataArray', JSON.stringify(_4d2DataArray))
+}
+
+function get4d2DataArray(){
+    const _4d2DataArray = window.sessionStorage.getItem('4d2DataArray')
+    if (!_4d2DataArray) {
+        return [];
+    }
+    console.log('_4d2DataArray', _4d2DataArray);
+    return JSON.parse(_4d2DataArray);
 }

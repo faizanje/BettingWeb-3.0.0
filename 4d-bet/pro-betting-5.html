@@ -141,7 +141,7 @@
             </div>
             <img class="heart mr-1" src="../assets/img/heart%20(2).png">
             <div class="confirm_btn">
-                <a href="" class="common_btn btn_black">Add Number</a>
+                <a onclick="addClicked()" class="common_btn btn_black">Add Number</a>
                 <button onclick="onPayClicked()" class="common_btn btn_white">PAY</button>
             </div>
         </div>
@@ -199,9 +199,11 @@
                         <img class="button_bg" src="../assets/img/button_bg.png" alt="">
                     </li>
                     <li class="numpad-btn">
+                        <a onclick="addClicked()">
+                            <span class="hash_txt btn_txt">ADD</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </a>
                         <!--                        <img class="btn_icon" src="../assets/img/plush.png" alt="">-->
-                        <span class="hash_txt btn_txt">ADD</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
                     </li>
                     <li class="numpad-btn">
                         <span class="number"><i class="fullstop">.</i></span>
@@ -216,8 +218,10 @@
                         <img class="button_bg" src="../assets/img/button_bg.png" alt="">
                     </li>
                     <li class="numpad-btn">
-                        <span class="hash_txt btn_txt">BET</span>
-                        <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        <a onclick="onPayClicked()">
+                            <span class="hash_txt btn_txt">BET</span>
+                            <img class="button_bg" src="../assets/img/button_bg.png" alt="">
+                        </a>
                     </li>
                 </ul>
             </div>

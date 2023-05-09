@@ -14,7 +14,15 @@ function proBettingDropdownHandler(value) {
 
 
 $('.next-btn').click(function () {
-    $('.dialog-container').toggleClass('active');
+
+    const hasTime = hasAllCompaniesHasTime()
+    console.log('hasTime',hasTime)
+    if (hasTime) {
+        $('.dialog-container').toggleClass('active');
+    } else {
+        $('.modal').addClass('active')
+    }
+
 })
 
 $('.bet_bx-2').click(function () {
@@ -35,7 +43,7 @@ $(".chip").on("click", function () {
     // get selected time
 
     // $(this).parent().parent().find('.icon_box-small').addClass('active')
-    console.log('pre data',selectedCompanies)
+    console.log('pre data', selectedCompanies)
     let selectedTime = $(this).text();
     // get selected company's selectedSrc
     let selectedSrc = $(this).parent().siblings(".brand_logo").find(".logo_2").attr("src");
@@ -91,13 +99,13 @@ $(".icon_box-small").click(function () {
 
     // console.log($(this))
     const isActive = $(this).hasClass('active')
-    console.log('isActive',isActive)
-    if(isActive){
-        if(!selectedCompanies.hasOwnProperty(selectedSrc)){
-            !selectedCompanies.hasOwnProperty(selectedSrc)
-        }
+    console.log('isActive', isActive)
+
+    if (!selectedCompanies.hasOwnProperty(selectedSrc)) {
+        selectedCompanies[selectedSrc] = [];
     }
-    else {
+
+    if (!isActive) {
         delete selectedCompanies[selectedSrc]
         // Deselect all chips for selectedSrc
         $("img[src='" + selectedSrc + "']").parent().parent().next('.chips').children().removeClass('selected');
@@ -110,23 +118,23 @@ $(".icon_box-small").click(function () {
     // console.log('selectedCompanies',selectedCompanies)
 });
 
-function addClicked(){
-    const pin = fetchEnteredPin()
-    saveEnteredPin(pin)
-    saveSelectedBrandLogos(getSelectedCompanies())
-    window.open('pay.html', '_self');
-}
+// function addClicked(){
+//     const pin = fetchEnteredPin()
+//     saveEnteredPin(pin)
+//     saveSelectedBrandLogos(getSelectedCompanies())
+//     window.open('pay.html', '_self');
+// }
 
-function getSelectedCompanies(){
+function getSelectedCompanies() {
     let selectedCompanies = {}; // Initialize an empty object to store the selected companies and times
 
 // Loop through each selected company
-    $('.icon_box-small.active').each(function() {
+    $('.icon_box-small.active').each(function () {
         let companySrc = $(this).find('.logo_2').attr('src'); // Get the source of the selected company
         let times = []; // Initialize an empty array to store the times for this company
 
         // Loop through each chip for this company and add its text content to the times array
-        $(this).closest('.flex-row').find('.chip.selected').each(function() {
+        $(this).closest('.flex-row').find('.chip.selected').each(function () {
             times.push($(this).text());
         });
 
@@ -144,10 +152,22 @@ $('#reset-btn').click(function () {
     selectedCompanies = {}
 })
 
+function isCompanySelected() {
+    return Object.keys(selectedCompanies).length !== 0;
+}
+
+function hasAllCompaniesHasTime() {
+    console.log('selectedCompanies',selectedCompanies)
+    return Object.entries(selectedCompanies).every(([company, times]) => {
+        console.log('times', times, times.length, times && times.length > 0)
+        return Array.isArray(times) && times.length > 0;
+    })
+}
+
 function on4d2rdPayClicked() {
-    let isCompanySelected = Object.keys(selectedCompanies).length !== 0;
-    if (isCompanySelected) {
-        addClicked()
+    let selected = isCompanySelected();
+    if (selected) {
+        window.open('pay.html', '_self')
     } else {
         $(".modal").addClass('active')
     }
@@ -156,3 +176,32 @@ function on4d2rdPayClicked() {
 $('.time-wrapper').click(function () {
     $('.dialog-container').addClass('active');
 })
+
+
+function addClicked() {
+    // getSelectedCompanies()
+    // let isCompanySelected = is4dCompanySelected();
+    // if(!isCompanySelected) {
+    //     $(".modal").addClass('active')
+    //     return
+    // }
+    //
+    const _4d2DataArray = get4d2DataArray()
+    const data4d2 = {}
+    // var activeAssets = $("div.let_logo").find("div.bet_bx.active img.bk_2").map(function () {
+    //     return $(this).attr("src");
+    // }).get();
+    // console.log('activeAssets', activeAssets)
+    //
+    const pin = fetchEnteredPin()
+    console.log('pin', pin)
+
+    const selectedDay = $("#days select").val();
+    console.log('selectedDay', selectedDay)
+
+    data4d2.activeAssets = selectedCompanies
+    data4d2.pin = pin
+    data4d2.selectedDay = selectedDay
+    _4d2DataArray.push(data4d2)
+    save4d2DataArray(_4d2DataArray)
+}

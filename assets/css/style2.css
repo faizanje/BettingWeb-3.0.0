@@ -207,7 +207,11 @@ section {
 
 header {background: #f88}
 section:last-child {border: none}
-footer {/*background: lightblue*/}
+footer {
+  /*background: lightblue*/
+  flex-shrink: 0;
+  height: auto;
+}
 
 .main_wrapper{
   /*flex: 1;*/
@@ -933,7 +937,7 @@ small{
 
 .bet_number_wrap {
   background: #000;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 0px 20px;
   margin-top: 20px;
   /*padding-bottom: 200px;*/
 }
@@ -1798,7 +1802,7 @@ img.btn_arrow {
   /*background-color: rgba(0, 0, 0, 0.8);*/
   background-color: black;
   color: white;
-  z-index: 500;
+  z-index: 999;
   transition: .3s;
   opacity: 0;
   visibility: hidden;
@@ -1879,3 +1883,41 @@ a {
   fill: black;
   color: black;
 }
+
+
+/*#container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+/*main {*/
+/*  flex: 1;*/
+/*  overflow-y: auto;*/
+/*}*/
+
+/*#main{*/
+/*  overflow-y: auto;*/
+/*  !*padding-bottom: 200px;*!*/
+/*}*/
+
+/*footer {*/
+/*  position: relative;*/
+/*  z-index: 1;*/
+/*}*/
+
+/*.keypad_box {*/
+/*  position: fixed;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  background-color: white;*/
+/*  display: none;*/
+/*  z-index: 2;*/
+
+/*}*/
+
+/*.show_keypad_box {*/
+/*  display: block;*/
+/*  margin-top: auto;*/
+/*}*/
