@@ -180,12 +180,11 @@ $('.time-wrapper').click(function () {
 
 function addClicked() {
     // getSelectedCompanies()
-    // let isCompanySelected = is4dCompanySelected();
-    // if(!isCompanySelected) {
-    //     $(".modal").addClass('active')
-    //     return
-    // }
-    //
+    if(!isCompanySelected()) {
+        $(".modal").addClass('active')
+        return
+    }
+
     const _4d2DataArray = get4d2DataArray()
     const data4d2 = {}
     // var activeAssets = $("div.let_logo").find("div.bet_bx.active img.bk_2").map(function () {
