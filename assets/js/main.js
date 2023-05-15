@@ -201,12 +201,17 @@ function showKeyboard() {
     // $('#main').css('padding-bottom', $('.keypad_box').height() + 'px');
 
     const filename = getCurrentFileName();
-    const proBetting1 = 'pro-betting-1.html';
-    if(filename === proBetting1){
+    const expectedFileNames = ['pro-betting-1.html', 'pro-betting-2.html', 'pro-betting-3.html', 'pro-betting-4.html',
+        'pro-betting-5.html', 'pro-betting-6.html'];
+
+    const expectedSimpleBettingFileNames = ['simple-betting-2.html'];
+
+    if (expectedFileNames.includes(filename)) {
         // Scroll to last input so that the whole screen is shown
         const lastInput = $("#lastInput")
         $('#main').scrollToSimple(lastInput);
-    }else{
+    } else if (expectedSimpleBettingFileNames.includes(filename)) {
+    } else {
         console.log(filename)
         $('#main').scrollToSimple($(currentFocusedInput));
     }
@@ -479,11 +484,11 @@ function goBack() {
     history.back();
 }
 
-function save4dDataArray(_4dDataArray){
+function save4dDataArray(_4dDataArray) {
     window.sessionStorage.setItem('4dDataArray', JSON.stringify(_4dDataArray))
 }
 
-function get4dDataArray(){
+function get4dDataArray() {
     const _4dDataArray = window.sessionStorage.getItem('4dDataArray')
     if (!_4dDataArray) {
         return [];
@@ -492,11 +497,11 @@ function get4dDataArray(){
     return JSON.parse(_4dDataArray);
 }
 
-function save4d2DataArray(_4d2DataArray){
+function save4d2DataArray(_4d2DataArray) {
     window.sessionStorage.setItem('4d2DataArray', JSON.stringify(_4d2DataArray))
 }
 
-function get4d2DataArray(){
+function get4d2DataArray() {
     const _4d2DataArray = window.sessionStorage.getItem('4d2DataArray')
     if (!_4d2DataArray) {
         return [];
