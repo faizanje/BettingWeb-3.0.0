@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+textarea,
+button,
+select,
+a,
+div{
+  -webkit-tap-highlight-color: transparent;
+}
 
 
 .grid-container {
