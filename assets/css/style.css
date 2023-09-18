@@ -1639,7 +1639,7 @@ span.set_x {
     grid-row-end: 4;
     /*grid-row: span 2;*/
     flex-shrink: 0;
-    height: 90px !important;
+    height: 96px !important;
 
     /*height: 90px !important;*/
     /*grid-column: 4;*/
