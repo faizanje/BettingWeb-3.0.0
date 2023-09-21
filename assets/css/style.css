@@ -1178,7 +1178,8 @@ small {
 }
 .rounded-container {
     
-    background:linear-gradient(180deg, rgba(237, 208, 138, 1.00) 11.97916641831398%,rgba(165, 118, 58, 1.00) 100%);;
+    background:
+    linear-gradient(180deg, rgba(235, 198, 112, 1.00) 11.97916641831398%,rgba(165, 118, 58, 1.00) 79.19588685035706%);
     border-radius: 100px;
     flex: 1;
     height: 70px;
@@ -1214,10 +1215,15 @@ table {
 
 .small-rectangle {
     width: 25%; 
-    background-color: white;
+    height: 105%;
+    margin-right: 20px; /* Add spacing between the rectangles */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+    background: linear-gradient(89.85deg, rgba(255, 255, 255, 1.00) 0%,rgba(211, 211, 211, 1.00) 100%);
     border-top-left-radius: 20px;
-    border-bottom-right-radius: 40px;
+    border-bottom-right-radius: 50px;
     padding: 10px;
+    
     
      /* Add spacing between the rectangles */
 }
@@ -1240,11 +1246,11 @@ table {
     border-left: 0.7px solid #707077; /* Vertical line style */
     
     text-align: center;
-    color: #e1ac25;
+    color: #D5A852;
     font-family: 'Avenir';
-    font-weight: lighter;
+    font-weight: 500;
 
-font-weight: 200;
+
 }
 .table-column, .col-1 {
     border-left: none ;
@@ -1330,9 +1336,23 @@ th:first-child, td:first-child {
   color: #e1ac25;
   display: inline-flex;
   align-items: start;  
+  text-align: center;
+  padding-top: 10px;
 
   
 }
+.payout__title,h4{
+  
+  
+
+    color: #e1ac25;
+    display: inline-flex;
+    align-items: start;  
+    text-align: center;
+    padding-top: 5px;
+  
+    
+  }
 
 
 .sets_card {
