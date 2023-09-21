@@ -263,6 +263,20 @@ footer { /*background: lightblue*/
     justify-content: center;
 }
 
+.rounded-border-rectangle {
+    
+    
+    
+    
+    border-radius: 10px;
+    border-top: 0px transparent;
+    border-left: 1px solid #707077;
+    border-right: 1px solid #707077; 
+    border-bottom: 1px solid #707077;
+    background-color: #2E2B1D;
+    
+    background-clip: padding-box; /* Clip the background to prevent it from overlapping the border */
+}
 .flex-item {
     box-sizing: border-box;
     /*width: 150px;*/
@@ -358,7 +372,12 @@ html, body {
     width: 84%;
     padding-right: 15px;
 }
-
+td, th{
+    padding: 20px;
+    border-left: none;
+    border-right: none;
+    
+}
 .list_text h2 {
     font-size: 32px;
     color: #000000;
@@ -1126,16 +1145,195 @@ small {
     padding: 12px;
     font-size: 28px;
 }
+.column {
+    float: left;
+    width: 25%;
+    font-size: 39;
+    
+    
+    
+  }
 
+  .rectangle-1, .rectangle-1 * {
+    box-sizing: border-box;
+    }
+    .rectangle-1 {
+    background: linear-gradient(180deg, rgba(237, 208, 138, 1.00) 11.97916641831398%,rgba(165, 118, 58, 1.00) 100%);
+    border-radius: 100px;
+    width: 482px;
+    height: 57px;
+    position: relative;
+    
+    }
+  
+  /* Clear floats after the columns */
+
+ /* Clear floats after the columns */
+ 
+  
 .betting_item_5 .number_input input {
     width: 55px;
     height: 55px;
     font-size: 30px;
 }
+.rounded-container {
+    
+    background:linear-gradient(180deg, rgba(237, 208, 138, 1.00) 11.97916641831398%,rgba(165, 118, 58, 1.00) 100%);;
+    border-radius: 100px;
+    flex: 1;
+    height: 70px;
+    
+    
+    
+}
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 100;
+}
+
+.rounded-container {
+    display: flex;
+    
+}
+
+.large-rectangle {
+    flex: 75%; /* Takes up 100% of available space */
+    
+    border-radius: 10px;
+    padding: 10px;
+}
+.header-th{
+    font-weight: 500;
+    font-size: 20px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    
+}
+
+.small-rectangle {
+    width: 25%; 
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 40px;
+    padding: 10px;
+    
+     /* Add spacing between the rectangles */
+}
+th {
+    
+    color: black;
+    
+    border-radius: 100;
+    text-align: left;
+    font-family:  'Avenir-Black' ;
+    font-weight: lighter;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.table-column, td {
+    border-left: 0.7px solid #707077; /* Vertical line style */
+    
+    text-align: center;
+    color: #e1ac25;
+    font-family: 'Avenir';
+    font-weight: lighter;
+
+font-weight: 200;
+}
+.table-column, .col-1 {
+    border-left: none ;
+    
+    text-align: center;
+    color: white;
+}
+
+th:first-child, td:first-child {
+    border-left: none; /* Remove left border for the first column */
+}
+.table{
+  background-color: #e1ac25;
+  border-radius: 100px;
+  
+  align-items: center;
+
+  
+
+  
+}
+.td-button{
+    width: 25%;
+    
+    
+     
+     background:linear-gradient(180deg, rgb(219, 183, 98) 11.97916641831398%,rgb(169, 113, 41) 100%);
+    
+    color: #000;
+    
+    border-radius: 100px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    
+    
+    
+}
+.table_head, th{
+  text-align: center;
+  
+  
+  
+  
+
+  
+}
+.table{
+   height: 200;
+   
+   width: 200;
+   
+   
+   border-radius: 100px;
+   padding: 10px;
+   font-size: 20px;
+   border-right-width:medium;
+  
+   border-collapse: collapse;
+   
+
+   
+   
+}
+.th1 .th2 .th3{
+  width: 25%;
+}
+
+.first_row{
+  height: 200;
+  width: 200;
+  background-color: #000;
+  color: #ff0101;
+  margin: 30;
+}
 .pay__title {
     text-align: center;
 }
+.payout__title{
+  
+  
+
+  color: #e1ac25;
+  display: inline-flex;
+  align-items: start;  
+
+  
+}
+
 
 .sets_card {
     padding: 15px;
@@ -1197,9 +1395,16 @@ small {
     align-items: center;
 }
 
-.small-img {
+.small-img  {
     width: 45px;
     margin-right: 5px;
+}
+.set_icon{
+  width: 30px;
+  margin-left: 12px;
+  
+  
+
 }
 
 .sets_logo img {
@@ -1365,7 +1570,7 @@ span.set_x {
 
 .mt-1 {
     margin-top: 1rem;
-!important;
+/* !important; */
 }
 
 .dialog-title {
