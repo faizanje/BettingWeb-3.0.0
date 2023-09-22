@@ -21,20 +21,28 @@
 
                 <div class="container">
                     <div class="result-icon-row">
-
-
-                        <img class="set_icon-result" src="../assets/img/selected_company%20(4).png" alt="">
-                        <img class="set_icon-result" src="../assets/img/company%20(3).png" alt="">
-                        <img class="set_icon-result" src="../assets/img/company%20(5).png" alt="">
-                        <img class="set_icon-result" src="../assets/img/company%20(2).png" alt="">
-
-
+                        <div class="result-icon_box-small active">
+                            <img src="../assets/img/company%20(4).png" class="logo_1" alt="">
+                            <img src="../assets/img/selected_company%20(4).png" class="logo_2" alt="">
+                        </div>
+                        <div class="result-icon_box-small">
+                            <img src="../assets/img/company%20(3).png" class="logo_1" alt="">
+                            <img src="../assets/img/selected_company%20(3).png" class="logo_2" alt="">
+                        </div>
+                        <div class="result-icon_box-small">
+                            <img src="../assets/img/company%20(5).png" class="logo_1" alt="">
+                            <img src="../assets/img/selected_company%20(5).png" class="logo_2" alt="">
+                        </div>
+                        <div class="result-icon_box-small">
+                            <img src="../assets/img/company%20(2).png" class="logo_1" alt="">
+                            <img src="../assets/img/selected_company%20(2).png" class="logo_2" alt="">
+                        </div>
                     </div>
 
 
                     <div class="outer-rectangle">
                         <div class="left-content">
-                            <img class="set_icon-inner" src="../assets/img/selected_company%20(4).png" alt="">
+                            <img class="result-icon_box-small auto" src="../assets/img/selected_company%20(4).png" alt="">
                         </div>
                         <div class="button-container">
                             <button class="button"><img src="../assets/img/back.png" alt="Left Arrow"></button>
@@ -51,187 +59,330 @@
 
 
                         <table class="result-table">
-
-                            <tr class="table-result-header">
-                                <th class="row1-result">1st Price</th>
-                                <th class="row1-result">2nd Prize</th>
-                                <th class="row1-result">3rd Prize</th>
+                            <thead class="table-result-header">
+                            <tr>
+                                <td class="result-table-title">1st Prize</td>
+                                <td class="result-table-title">2nd Prize</td>
+                                <td class="result-table-title">3rd Prize</td>
                             </tr>
-                            <tr class="table-result-body">
+                            </thead>
+                            <tbody class="table-result-body">
+                            <tr>
                                 <td>
-                                    <div class="text-container">
-                                        <span class="small-text">K</span>
-                                        <span class="big-text">0000</span>
-                                    </div>
+                                    <div class="table-result-float-letter float-letter-near">K</div>
+                                    0000
                                 </td>
                                 <td>
-
-                                    <div class="text-container">
-                                        <span class="small-text">I</span>
-                                        <span class="big-text">0000</span>
-                                    </div>
-
+                                    <div class="table-result-float-letter float-letter-near">B</div>
+                                    0000
                                 </td>
                                 <td>
-                                    <div class="text-container">
-                                        <span class="small-text">I</span>
-                                        <span class="big-text">0000</span>
-                                    </div>
-
+                                    <div class="table-result-float-letter float-letter-near">I</div>
+                                    0000
                                 </td>
                             </tr>
+                            </tbody>
                         </table>
 
+                        <table class="result-table mt-1">
+                            <thead class="table-result-header">
+                            <tr>
+                                <td colspan="5" class="result-table-title">Special Prize</td>
+                            </tr>
+                            </thead>
+                            <tbody class="table-result-body">
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">A</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">B</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">C</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">D</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">E</div>
+                                    0000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">F</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">G</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">H</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">I</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">J</div>
+                                    0000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">K</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">L</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">M</div>
+                                    0000
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-                        <div class="table-3pm-continue">
-                            <div class="rounded-rectangle">
-                                <div class="text-inside">7 PM</div>
-                            </div>
+                        <table class="result-table mt-1">
+                            <thead class="table-result-header">
+                            <tr>
+                                <td colspan="5" class="result-table-title">Consolation Prize</td>
+                            </tr>
+                            </thead>
+                            <tbody class="table-result-body">
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">N</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">O</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">P</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">Q</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">R</div>
+                                    0000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">R</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">T</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">U</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">V</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">W</div>
+                                    0000
+                                </td>
+                            </tr>
 
-                            <table class="table-7PM">
-
-                                <tr class="table-result-header">
-                                    <th class="row1-result"></th>
-                                    <th class="row1-result"></th>
-                                    <th class="row1-result">Special Prize</th>
-                                    <th class="row1-result"></th>
-                                    <th class="row1-result"></th>
-                                </tr>
-                                <tr class="table-result-body">
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">A</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-                                    </td>
-                                    <td>
-
-                                        <div class="text-container">
-                                            <span class="small-text">B</span>
-                                            <span class="big-text">------</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">C</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">D</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">E</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr class="table-result-body">
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">F</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-                                    </td>
-                                    <td>
-
-                                        <div class="text-container">
-                                            <span class="small-text">G</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">H</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">I</span>
-                                            <span class="big-text">-------</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">J</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-
-
-                                </tr>
-                                <tr class="table-result-body">
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text"></span>
-                                            <span class="big-text"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-
-                                        <div class="text-container">
-                                            <span class="small-text">K</span>
-                                            <span class="big-text">-------</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">L</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-
-
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text">M</span>
-                                            <span class="big-text">0000</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        <div class="text-container">
-                                            <span class="small-text"></span>
-                                            <span class="big-text"></span>
-                                        </div>
-
-                                    </td>
-
-
-                                </tr>
-
-                            </table>
-                        </div>
+                            </tbody>
+                        </table>
 
                     </div>
-                </div>
 
+                    <div class="table-7PM mt-3">
+                        <div class="rounded-rectangle">
+                            <div class="text-inside">7 PM</div>
+                        </div>
+
+
+                        <table class="result-table">
+                            <thead class="table-result-header">
+                            <tr>
+                                <td class="result-table-title">1st Prize</td>
+                                <td class="result-table-title">2nd Prize</td>
+                                <td class="result-table-title">3rd Prize</td>
+                            </tr>
+                            </thead>
+                            <tbody class="table-result-body">
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-near">K</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-near">B</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-near">I</div>
+                                    0000
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="result-table mt-1">
+                            <thead class="table-result-header">
+                            <tr>
+                                <td colspan="5" class="result-table-title">Special Prize</td>
+                            </tr>
+                            </thead>
+                            <tbody class="table-result-body">
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">A</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">B</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">C</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">D</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">E</div>
+                                    0000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">F</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">G</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">H</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">I</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">J</div>
+                                    0000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">K</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">L</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">M</div>
+                                    0000
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="result-table mt-1">
+                            <thead class="table-result-header">
+                            <tr>
+                                <td colspan="5" class="result-table-title">Consolation Prize</td>
+                            </tr>
+                            </thead>
+                            <tbody class="table-result-body">
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">N</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">O</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">P</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">Q</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">R</div>
+                                    0000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">R</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">T</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">U</div>
+                                    0000
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">V</div>
+                                    ----
+                                </td>
+                                <td>
+                                    <div class="table-result-float-letter float-letter-edge ">W</div>
+                                    0000
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="mt-3"></div>
+                </div>
             </div>
 
         </section>
     </main>
 
 </div>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
 </body>
 </html>

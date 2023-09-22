@@ -331,6 +331,21 @@ function handleNextSimpleBetting() {
 }
 
 
+$('.result-icon_box-small').click(function () {
+    console.log('Clicked')
+    // Remove the active class from all .result-icon_box-small elements
+    $('.result-icon_box-small').removeClass('active');
+
+    // Add the active class to the clicked element
+    $(this).addClass('active');
+
+    // Get the src attribute of the selected .logo_2 image
+    var selectedSrc = $(this).find('.logo_2').attr('src');
+
+    // Set the selected src to the .result-icon_box-small in .left-content
+    $('.outer-rectangle .left-content .result-icon_box-small').attr('src', selectedSrc);
+});
+
 function saveSelectedBrandLogos(selectedBrandLogos) {
     window.sessionStorage.setItem("selectedBrandLogos", JSON.stringify(selectedBrandLogos))
 }
@@ -509,3 +524,4 @@ function get4d2DataArray() {
     console.log('_4d2DataArray', _4d2DataArray);
     return JSON.parse(_4d2DataArray);
 }
+
