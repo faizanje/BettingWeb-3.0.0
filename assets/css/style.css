@@ -1255,7 +1255,8 @@ table {
 .table-column, .col-1 {
     border-left: none ;
     
-    text-align: center;
+    text-align: left;
+    
     color: white;
 }
 
@@ -1471,6 +1472,8 @@ th:first-child, td:first-child {
     
     
   }
+
+  
   .table-3pm-continue{
     margin-top: 24px;
     justify-content: center;
@@ -1483,8 +1486,8 @@ th:first-child, td:first-child {
 }
 .table-result-header .row1-result{
     padding: 20px;
-    font-size: 20px;
-    font-weight:800;
+    font-size: 22px;
+    font-weight:900;
 
 
     
@@ -1548,12 +1551,21 @@ th:first-child, td:first-child {
    font-size: 22px;
    
 }
+
 .table-result-body td{
     color: black;
     
     border-color: #000;
     
     
+    
+ }
+ .section-7pm{
+    margin-top: 60px;
+ }
+ .table-consulation th,td{
+    border-collapse: collapse;
+    border: 0.8px solid black;
  }
   .result-table th {
     padding: 10px;
