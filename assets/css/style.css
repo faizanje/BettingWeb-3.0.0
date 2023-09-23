@@ -1503,6 +1503,7 @@ th:first-child, td:first-child {
 
 .result-table {
     border-collapse: collapse;
+    min-width: 400px;
 }
 
 .result-table2 {
