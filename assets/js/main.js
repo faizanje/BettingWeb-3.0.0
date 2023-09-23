@@ -340,8 +340,17 @@ $('.result-icon_box-small').click(function () {
     $(this).addClass('active');
 
     // Get the src attribute of the selected .logo_2 image
-    var selectedSrc = $(this).find('.logo_2').attr('src');
-
+    const selectedSrc = $(this).find('.logo_2').attr('src');
+    const pathSegments = selectedSrc.split('/'); // Split the path by '/'
+    const fileName = pathSegments[pathSegments.length - 1]; // Get the last element of the array
+    const perdanaFilename = 'selected_company%20(4).png'
+    let time = '7 PM';
+    if(fileName !== perdanaFilename){
+        time = '9 PM'
+    }
+    $("#result-time2").html(time)
+    console.log('Filename',fileName)
+    if(fileName === '')
     // Set the selected src to the .result-icon_box-small in .left-content
     $('.outer-rectangle .left-content .result-icon_box-small').attr('src', selectedSrc);
 });
