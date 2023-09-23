@@ -348,6 +348,10 @@ html, body {
     color: #f1d24c;
 }
 
+.table-img-small{
+    width: 62%;
+}
+
 .payout__title h2 {
     font-size: 28px;
     text-transform: uppercase;
