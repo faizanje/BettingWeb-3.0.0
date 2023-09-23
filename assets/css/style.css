@@ -1585,7 +1585,7 @@ th:first-child, td:first-child {
     align-items: center;
     justify-content: center;
     align-content: center;
-
+    min-width: 400px;
 
 }
 
