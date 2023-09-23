@@ -264,6 +264,9 @@ footer { /*background: lightblue*/
 }
 
 .rounded-border-rectangle {
+    top: -25px;
+    z-index: 10;
+    position: relative;
     border-radius: 20px;
     border: 1px solid white;
     border-top: 0 transparent;
@@ -332,6 +335,31 @@ html, body {
     margin-left: 15px;
     position: relative;
     top: -3px;
+    cursor: pointer;
+}
+
+
+.payout__title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    color: #f1d24c;
+}
+
+.payout__title h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.payout__title img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    position: relative;
+    top: -8px;
     cursor: pointer;
 }
 
@@ -1193,8 +1221,10 @@ small {
 
 
 .rounded-container {
+    z-index: 20;
     position: relative;
-    top: 30px;
+    /*top: 30px;*/
+    /*background: linear-gradient(180deg, rgba(235, 198, 112, 1.00) 11.97916641831398%, rgba(165, 118, 58, 1.00) 79.19588685035706%);*/
     background: linear-gradient(180deg, rgba(235, 198, 112, 1.00) 11.97916641831398%, rgba(165, 118, 58, 1.00) 79.19588685035706%);
     border-radius: 100px;
     box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 255, 255, 0.5), inset -0.2em -0.2em 0.2em 0 rgba(0, 0, 0, 0.5);
@@ -1336,26 +1366,30 @@ th:first-child, td:first-child {
 }
 
 
-.payout__title {
-    position: relative;
-    top: 30px;
+/*.payout__title {*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    align-content: center;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+.top-30{
+
 }
 
-.payout__title, h4 {
+/*.payout__title, h4 {*/
 
+/*!* margin-top: 20px; *!*/
 
-    /* margin-top: 20px; */
+/*color: #e1ac25;*/
+/*!*display: inline-flex;*!*/
+/*text-align: center;*/
 
-    color: #e1ac25;
+/*!*padding-top: 5px;*!*/
 
-    display: inline-flex;
-
-    align-items: start;
-
-    text-align: center;
-
-    padding-top: 5px;
-}
+/*!*justify-content: center;*!*/
+/*}*/
 
 
 .sets_card {
@@ -1694,7 +1728,8 @@ th:first-child, td:first-child {
 
 .set_icon {
     width: 30px;
-    margin-left: 12px;
+    height: 30px;
+    /*margin-left: 12px;*/
 
 
 }
